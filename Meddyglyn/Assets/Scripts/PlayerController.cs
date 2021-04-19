@@ -36,12 +36,8 @@ public class PlayerController : MonoBehaviour
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
-      // if (move != Vector3.zero)
-      //  {
-      //     gameObject.transform.forward = move;
-      //  }
 
-        // Changes the height position of the player..
+        // Jump code starts
         if (inputManager.PlayerJumped() && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
@@ -49,6 +45,8 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+        //Jump code ends
     }
+
 
 }
