@@ -6,20 +6,37 @@ public class SelectionManager : MonoBehaviour
 {
 
     [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material defaultMaterial;
+    [SerializeField] string selectableTag = "Selectable";
+    private Transform _selection;
 
     // Update is called once per frame
     void Update()
     {
+
+        if (_selection != null)
+        {
+            var selectionRenderer = _selection.GetComponent<Renderer>();
+            selectionRenderer.material = defaultMaterial;
+            _selection = null;
+        }
+
         var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 2f))
         {
             var selection = hit.transform;
-            var selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null)
+                if (selection.CompareTag(selectableTag))
             {
-                selectionRenderer.material = highlightMaterial;
+                var selectionRenderer = selection.GetComponent<Renderer>();
+                if (selectionRenderer != null)
+                {
+                    selectionRenderer.material = highlightMaterial;
+                }
+
+                _selection = selection;
             }
+
         }
     }
 }

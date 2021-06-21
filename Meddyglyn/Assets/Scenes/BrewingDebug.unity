@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 121856952}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2820,7 +2820,7 @@ GameObject:
   - component: {fileID: 713009943}
   m_Layer: 0
   m_Name: HoneyBuy
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5153,7 +5153,7 @@ GameObject:
   - component: {fileID: 1045762937}
   m_Layer: 0
   m_Name: YeastBuy
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11005,7 +11005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1695472353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11018,7 +11018,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534e6bc968a1f364d8812080a068fd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightMaterial: {fileID: 0}
+  highlightMaterial: {fileID: 2100000, guid: f818a3b2b67e9a145a1de85178e11293, type: 2}
+  defaultMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  selectableTag: Selectable
 --- !u!4 &1695472354
 Transform:
   m_ObjectHideFlags: 0
