@@ -16,8 +16,11 @@ public class SelectionManager : MonoBehaviour
 
         if (_selection != null)
         {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
+
+            //var selectionRenderer = _selection.GetComponent<Renderer>();
+            //selectionRenderer.material = defaultMaterial;
+            _selection.gameObject.GetComponent<Outline>().enabled = false;
+
             _selection = null;
         }
 
@@ -28,11 +31,14 @@ public class SelectionManager : MonoBehaviour
             var selection = hit.transform;
                 if (selection.CompareTag(selectableTag))
             {
-                var selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null)
-                {
-                    selectionRenderer.material = highlightMaterial;
-                }
+                hit.collider.gameObject.GetComponent<Outline>().enabled = true;
+                //var selectionRenderer = selection.GetComponent<Renderer>();
+ 
+                //if (selectionRenderer != null)
+                //{
+                //    selectionRenderer.material = highlightMaterial;
+//
+                //}
 
                 _selection = selection;
             }
