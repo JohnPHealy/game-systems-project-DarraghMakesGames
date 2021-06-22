@@ -10,6 +10,8 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] string selectableTag = "Selectable";
     private Transform _selection;
 
+
+
     // Update is called once per frame
     void Update()
     {
@@ -44,5 +46,20 @@ public class SelectionManager : MonoBehaviour
             }
 
         }
+    }
+
+    //Interaction script - sends message to activate "Interacted" script on highlighted object
+    public void Interact()
+    {
+        if (_selection != null)
+        {
+            //Debug.Log("Interact");
+            _selection.gameObject.SendMessage("Interacted");
+        }
+        else
+        {
+            Debug.Log("Nothing selected");
+        }
+
     }
 }
