@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class HoneyShop : MonoBehaviour
 {
-
+    [SerializeField] private Transform carriedPos;
+    [SerializeField] private GameObject Honey100;
+    [SerializeField] private GameObject GoldCount;
     private GameObject CarriedObject;
 
     // Start is called before the first frame update
@@ -21,6 +23,8 @@ public class HoneyShop : MonoBehaviour
         }
         else
         {
+            Instantiate(Honey100, carriedPos.position, carriedPos.rotation, carriedPos);
+            GoldCount.gameObject.SendMessage("spendGold", 5.0);
             Debug.Log("Picked up honey");
         }
     }

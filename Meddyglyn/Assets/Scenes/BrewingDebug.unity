@@ -2536,7 +2536,6 @@ GameObject:
   - component: {fileID: 713009944}
   - component: {fileID: 713009943}
   - component: {fileID: 713009949}
-  - component: {fileID: 713009948}
   - component: {fileID: 713009950}
   m_Layer: 0
   m_Name: HoneyBuy
@@ -2864,18 +2863,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &713009948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713009942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e544567c142a57c4d9b78164cc1825e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &713009949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2932,6 +2919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95bbca27abfde2945b3de0c8df9edd31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carriedPos: {fileID: 1015847767}
+  Honey100: {fileID: 7936150696333784902, guid: 9cef7fb46f04a7b44a4c0eafebbb705b, type: 3}
+  GoldCount: {fileID: 609353186}
 --- !u!1 &739411085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4430,6 +4420,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015847767}
+  - component: {fileID: 1015847768}
+  - component: {fileID: 1015847769}
   m_Layer: 0
   m_Name: CarriedObject
   m_TagString: Untagged
@@ -4451,6 +4443,80 @@ Transform:
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015847768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015847766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e6cff100bf94849943b5c384b6ea8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1015847769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015847766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c2da69177578b0d448c6c824aa323b74, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0fc00333-a86c-4ea6-b04d-f95b9db0d09f
+    m_ActionName: DefaultPlayer/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 60338f88-f1d3-4556-a441-c3dd58c7fc3e
+    m_ActionName: DefaultPlayer/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d218218-b562-45fb-8cb0-385e6d4cf4ce
+    m_ActionName: DefaultPlayer/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0a069037-cad1-40a1-af58-f84c49fc291e
+    m_ActionName: DefaultPlayer/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1015847768}
+        m_TargetAssemblyTypeName: CarryingManager, Assembly-CSharp
+        m_MethodName: DropCarrying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1c42e70d-e271-4f5f-9db6-578129593d5a
+    m_ActionName: DefaultPlayer/DropItem[/Keyboard/q]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: DefaultPlayer
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1017509425
 GameObject:
   m_ObjectHideFlags: 0
