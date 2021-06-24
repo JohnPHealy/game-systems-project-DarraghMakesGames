@@ -12,7 +12,7 @@ public class CarryingManager : MonoBehaviour
         if(this.gameObject.transform.childCount > 0)
         {
             carried = this.gameObject.transform.GetChild(0);
-            carried.GetComponent<Rigidbody>().useGravity = true;
+            carried.GetComponent<Rigidbody>().isKinematic = false;
             carried.transform.parent = null;
         }
         else

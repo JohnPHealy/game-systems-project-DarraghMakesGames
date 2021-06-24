@@ -8,6 +8,14 @@ public class VesselManager : MonoBehaviour
     private GameObject CarriedObject;
     private GameObject carriedObj;
     private Transform carried;
+    
+    [SerializeField] private int honeyAmount;
+    [SerializeField] private int honeyAdd;
+    [SerializeField] private int waterAmount;
+    [SerializeField] private int waterAdd;
+    [SerializeField] private int yeastAdd;
+    [SerializeField] private bool hasYeast;
+    [SerializeField] private bool isStarted;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +33,10 @@ public class VesselManager : MonoBehaviour
         {
             carried = CarriedObject.gameObject.transform.GetChild(0);
             carriedObj = carried.transform.gameObject;
+            honeyAdd = carriedObj.GetComponent<IngredientValues>().honey;
+            waterAdd = carriedObj.GetComponent<IngredientValues>().water;
+            yeastAdd = carriedObj.GetComponent<IngredientValues>().yeast;
+
             Destroy(carriedObj);
         }
     }
