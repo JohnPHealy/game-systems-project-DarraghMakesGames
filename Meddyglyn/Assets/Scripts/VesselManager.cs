@@ -37,6 +37,16 @@ public class VesselManager : MonoBehaviour
             waterAdd = carriedObj.GetComponent<IngredientValues>().water;
             yeastAdd = carriedObj.GetComponent<IngredientValues>().yeast;
 
+            honeyAmount = honeyAmount + honeyAdd/2;
+            honeyAdd = 0;
+            waterAmount = waterAmount + waterAdd/2;
+            waterAdd = 0;
+            
+            if (yeastAdd > 0)
+            {
+                hasYeast = true;
+            }
+
             Destroy(carriedObj);
         }
     }
