@@ -16,6 +16,10 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private int yeastAdd;
     [SerializeField] public bool hasYeast;
     [SerializeField] private bool isStarted;
+    [SerializeField] private int alcohol;
+    [SerializeField] private int yeastTolerance;
+    [SerializeField] private int totalLiquidContent;
+    [SerializeField] private int maxLiquidContent;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +45,7 @@ public class VesselManager : MonoBehaviour
             //honeyAdd = 0;
             waterAmount = waterAmount + waterAdd/2;
             //waterAdd = 0;
+            totalLiquidContent = waterAmount + honeyAmount;
             
             if (yeastAdd > 0)
             {
@@ -48,6 +53,15 @@ public class VesselManager : MonoBehaviour
             }
 
             Destroy(carriedObj);
+        }
+    }
+
+    private void Update()
+    {
+        if (hasYeast && honeyAmount > 0)
+        {
+            honeyAmount = honeyAmount - 10;
+            alcohol = alcohol + 1;
         }
     }
 
