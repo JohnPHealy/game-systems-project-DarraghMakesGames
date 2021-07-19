@@ -957,9 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e776197bb42356f43a2f81c560795217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carriedPos: {fileID: 0}
   itemForSale: {fileID: 7936150696333784902, guid: c386c04fee632f74bbfafba0f3831878, type: 3}
-  GoldCount: {fileID: 0}
   cost: 0
 --- !u!1 &123106380
 GameObject:
@@ -3069,9 +3067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e776197bb42356f43a2f81c560795217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carriedPos: {fileID: 0}
   itemForSale: {fileID: 7936150696333784902, guid: 9cef7fb46f04a7b44a4c0eafebbb705b, type: 3}
-  GoldCount: {fileID: 0}
   cost: 5
 --- !u!114 &713009949
 MonoBehaviour:
@@ -4286,7 +4282,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17018
+  m_Name: pb_Mesh17048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5602,9 +5598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e776197bb42356f43a2f81c560795217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carriedPos: {fileID: 0}
   itemForSale: {fileID: 7936150696333784902, guid: c6502b98312415b4683dee2f46ebeab9, type: 3}
-  GoldCount: {fileID: 0}
   cost: 10
 --- !u!43 &1062074907
 Mesh:
@@ -10162,6 +10156,8 @@ MonoBehaviour:
   yeastTolerance: 0
   totalLiquidContent: 0
   maxLiquidContent: 500
+  ingredientAmount: 0
+  capacityRemaining: 0
 --- !u!114 &1411541969
 MonoBehaviour:
   m_ObjectHideFlags: 0

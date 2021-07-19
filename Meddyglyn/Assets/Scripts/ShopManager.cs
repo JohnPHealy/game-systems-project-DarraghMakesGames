@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    [SerializeField] private Transform carriedPos;
+    private Transform carriedPos;
+    private GameObject GoldCount;
     [SerializeField] private GameObject itemForSale;
-    [SerializeField] private GameObject GoldCount;
     [SerializeField] private int cost;
     private GameObject CarriedObject;
 

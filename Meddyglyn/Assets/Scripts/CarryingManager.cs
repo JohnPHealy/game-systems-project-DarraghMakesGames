@@ -13,6 +13,7 @@ public class CarryingManager : MonoBehaviour
         {
             carried = this.gameObject.transform.GetChild(0);
             carried.GetComponent<Rigidbody>().isKinematic = false;
+            carried.GetComponent<MeshCollider>().enabled = true;
             carried.transform.parent = null;
         }
         else
