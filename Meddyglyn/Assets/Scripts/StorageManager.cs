@@ -10,6 +10,7 @@ public class StorageManager : MonoBehaviour
     [SerializeField] int age;
     [SerializeField] int alcohol;
     [SerializeField] bool filled = false;
+    [SerializeField] public int value; 
     
 
     public void Fill(GameObject vessel)

@@ -15,9 +15,14 @@ public class GoldCount : MonoBehaviour
     }
 
     //Function to reduce gold count by the amount defined in "cost"
-    void spendGold(int cost)
+    void SpendGold(int cost)
     {
         gold = gold - cost;
+    }
+
+    void AddGold (int profit)
+    {
+        gold = gold + profit;
     }
 
 }

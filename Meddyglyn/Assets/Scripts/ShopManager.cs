@@ -27,7 +27,7 @@ public class ShopManager : MonoBehaviour
         else
         {
             Instantiate(itemForSale, carriedPos.position, carriedPos.rotation, carriedPos);
-            GoldCount.gameObject.SendMessage("spendGold", cost);
+            GoldCount.gameObject.SendMessage("SpendGold", cost);
             Debug.Log("Item bought");
         }
     }
