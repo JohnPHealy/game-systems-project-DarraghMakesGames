@@ -8,5 +8,7 @@ public class IngredientValues : MonoBehaviour
     public int honey;
     public int water;
     public int yeast;
+    public int yeastTolerance;
+    public int amount;
 
 }

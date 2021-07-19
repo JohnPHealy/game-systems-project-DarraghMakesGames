@@ -20,6 +20,8 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private int yeastTolerance;
     [SerializeField] private int totalLiquidContent;
     [SerializeField] private int maxLiquidContent;
+    [SerializeField] private int ingredientAmount;
+    [SerializeField] private int capacityRemaining;
 
     // Start is called before the first frame update
     void Start()
@@ -35,35 +37,58 @@ public class VesselManager : MonoBehaviour
         }
         else
         {
+            capacityRemaining = maxLiquidContent - totalLiquidContent;
             carried = CarriedObject.gameObject.transform.GetChild(0);
             carriedObj = carried.transform.gameObject;
+            ingredientAmount = carriedObj.GetComponent<IngredientValues>().amount;
             honeyAdd = carriedObj.GetComponent<IngredientValues>().honey;
             waterAdd = carriedObj.GetComponent<IngredientValues>().water;
             yeastAdd = carriedObj.GetComponent<IngredientValues>().yeast;
 
-            honeyAmount = honeyAmount + honeyAdd/2;
-            //honeyAdd = 0;
-            waterAmount = waterAmount + waterAdd/2;
-            //waterAdd = 0;
-            totalLiquidContent = waterAmount + honeyAmount;
-            
-            if (yeastAdd > 0)
-            {
-                hasYeast = true;
-            }
+                if (capacityRemaining > ingredientAmount || yeastAdd > 0)
+                {
+                    honeyAmount = honeyAmount + honeyAdd / 2;
+                    //honeyAdd = 0;
+                    waterAmount = waterAmount + waterAdd / 2;
+                    //waterAdd = 0;
+                    totalLiquidContent = waterAmount + honeyAmount;
 
-            Destroy(carriedObj);
+                    if (yeastAdd > 0)
+                    {
+                        hasYeast = true;
+                        yeastTolerance = carriedObj.GetComponent<IngredientValues>().yeastTolerance;
+                    }
+
+                    Destroy(carriedObj);
+                }
+                else
+                {
+                    Debug.Log("Not enough room in vessel");
+
+                }
         }
     }
 
     private void Update()
     {
-        if (hasYeast && honeyAmount > 0)
+        if (hasYeast && honeyAmount > 0 && isStarted == false)
         {
-            honeyAmount = honeyAmount - 10;
-            alcohol = alcohol + 1;
+            StartCoroutine("fermentation");
+            isStarted = true;
+    //        honeyAmount = honeyAmount - 10;
+    //        alcohol = alcohol + 1;
         }
     }
 
+    IEnumerator fermentation()
+    {
+        while (alcohol < yeastTolerance)
+        {
+            yield return new WaitForSeconds(5f);
+            honeyAmount = honeyAmount - 10;
+            alcohol = alcohol + 1;
+            
+        }
+    }
 
 }

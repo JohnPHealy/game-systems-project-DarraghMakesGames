@@ -175,3 +175,5 @@ MonoBehaviour:
   honey: 0
   water: 0
   yeast: 1
+  yeastTolerance: 5
+  amount: 0

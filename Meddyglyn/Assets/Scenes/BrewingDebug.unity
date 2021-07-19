@@ -10161,7 +10161,7 @@ MonoBehaviour:
   alcohol: 0
   yeastTolerance: 0
   totalLiquidContent: 0
-  maxLiquidContent: 0
+  maxLiquidContent: 500
 --- !u!114 &1411541969
 MonoBehaviour:
   m_ObjectHideFlags: 0
