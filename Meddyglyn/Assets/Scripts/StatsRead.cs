@@ -18,21 +18,22 @@ public class StatsRead : MonoBehaviour
         statsReadout = gameObject.GetComponent<TextMesh>();
         vessel = transform.parent.gameObject;
         yeastStatus = "Yes";
-        StartCoroutine (ReadIngredients());
+        //StartCoroutine (ReadIngredients());
     }
 
-    //void Update()
-    //{
-    //    honeyAmount = vessel.GetComponent<VesselManager>().honeyAmount;
-    //    waterAmount = vessel.GetComponent<VesselManager>().waterAmount;
-    //    statsReadout.text = "Honey: " + honeyAmount + "\n" + "Water: " + waterAmount + "Has Yeast: " + yeastStatus;
-    //}
-
-    IEnumerator ReadIngredients()
+    void Update()
     {
         honeyAmount = vessel.GetComponent<VesselManager>().honeyAmount;
         waterAmount = vessel.GetComponent<VesselManager>().waterAmount;
         statsReadout.text = "Honey: " + honeyAmount + "\n" + "Water: " + waterAmount + "Has Yeast: " + yeastStatus;
-        yield return new WaitForSeconds(0.5f);
     }
+
+    //IEnumerator ReadIngredients()
+    //{
+    //    honeyAmount = vessel.GetComponent<VesselManager>().honeyAmount;
+    //    waterAmount = vessel.GetComponent<VesselManager>().waterAmount;
+    //    statsReadout.text = "Honey: " + honeyAmount + "\n" + "Water: " + waterAmount + "Has Yeast: " + yeastStatus;
+    //    yield return new WaitForSeconds(0.5f);
+    //}
+
 }
