@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class StorageManager : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     [SerializeField] int honeyAmount;
     [SerializeField] int age;
     [SerializeField] int alcohol;
     [SerializeField] bool filled = false;
     [SerializeField] public int value;
-    private bool agingStarted;
-    
+    [SerializeField] private int sweetnessMarketValue;
+    [SerializeField] private int alcoholMarketValue;
+    [SerializeField] private int ageMarketValue;
+    [SerializeField] private int sweetnessValue;
+    [SerializeField] private int alcoholValue;
+    [SerializeField] private int ageValue;
+    [SerializeField] private bool agingStarted;
 
     public void Fill(GameObject vessel)
     {
@@ -41,6 +45,19 @@ public class StorageManager : MonoBehaviour
         }
 
             
+    }
+
+    private void Update()
+    {
+        sweetnessMarketValue = MarketValues.sweetnessValue;
+        alcoholMarketValue = MarketValues.strengthValue;
+        ageMarketValue = MarketValues.ageValue;
+
+        sweetnessValue = honeyAmount * sweetnessMarketValue;
+        alcoholValue = alcohol * alcoholMarketValue;
+        ageValue = age * ageMarketValue;
+
+        value = sweetnessValue + alcoholValue + ageValue;
     }
 
 
