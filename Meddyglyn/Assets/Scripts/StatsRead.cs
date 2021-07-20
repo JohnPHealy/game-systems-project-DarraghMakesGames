@@ -10,6 +10,7 @@ public class StatsRead : MonoBehaviour
     private TextMesh statsReadout;
     private int honeyAmount;
     private int waterAmount;
+    private int alcoholAmount;
     private GameObject vessel;
     private string yeastStatus;
 
@@ -25,7 +26,8 @@ public class StatsRead : MonoBehaviour
     {
         honeyAmount = vessel.GetComponent<VesselManager>().honeyAmount;
         waterAmount = vessel.GetComponent<VesselManager>().waterAmount;
-        statsReadout.text = "Honey: " + honeyAmount + "\n" + "Water: " + waterAmount + "Has Yeast: " + yeastStatus;
+        alcoholAmount = vessel.GetComponent<VesselManager>().alcohol;
+        statsReadout.text = "Honey: " + honeyAmount + "\n" + "Water: " + waterAmount + "Has Yeast: " + yeastStatus + "\n" + "Alcohol: " + alcoholAmount;
     }
 
     //IEnumerator ReadIngredients()
