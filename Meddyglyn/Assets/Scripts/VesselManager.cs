@@ -15,6 +15,11 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private int waterAdd;
     [SerializeField] private int yeastAdd;
     [SerializeField] public bool hasYeast;
+    [SerializeField] private float sweetness;
+
+    [SerializeField] private float honeyAmountFloat;
+    [SerializeField] private float totalLiquidContentFloat;
+
     [SerializeField] private bool isStarted;
     [SerializeField] public int alcohol;
     [SerializeField] private int yeastTolerance;
@@ -24,13 +29,16 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private int capacityRemaining;
     [SerializeField] public GameObject vesselObj;
 
-    // Start is called before the first frame update
+    
+
+    // Finding the CarriedObject gameObject as a target for retrieving values
     void Start()
     {
         CarriedObject = GameObject.Find("CarriedObject");
         vesselObj = this.gameObject;
     }
 
+    // When interacted with, this function looks in the player's hand (CarriedObject) for a child (object being carried)
     public void Interacted()
     {
         if (CarriedObject.transform.childCount < 1)
@@ -42,6 +50,7 @@ public class VesselManager : MonoBehaviour
             carried = CarriedObject.gameObject.transform.GetChild(0);
             carriedObj = carried.transform.gameObject;
 
+                // If the carried object is of "Ingredient" type, values from that object are added to the vessel and the carried object is destroyed
                 if (carriedObj.gameObject.CompareTag("Ingredient"))
                 {
                     capacityRemaining = maxLiquidContent - totalLiquidContent;
@@ -50,7 +59,8 @@ public class VesselManager : MonoBehaviour
                     honeyAdd = carriedObj.GetComponent<IngredientValues>().honey;
                     waterAdd = carriedObj.GetComponent<IngredientValues>().water;
                     yeastAdd = carriedObj.GetComponent<IngredientValues>().yeast;
-
+                        
+                        //Ingredients are only added if there is room in the vessel
                         if (capacityRemaining > ingredientAmount || yeastAdd > 0)
                         {
                             honeyAmount = honeyAmount + honeyAdd / 2;
@@ -73,7 +83,7 @@ public class VesselManager : MonoBehaviour
 
                         }
                 }
-
+                    // If the carried object is of type "Storage", the following triggers the "Fill" function of the storage object
                     else if (carriedObj.gameObject.CompareTag("Storage"))
                         {
                         Debug.Log("Vessel to fill the bottle");
@@ -84,7 +94,19 @@ public class VesselManager : MonoBehaviour
 
     private void Update()
     {
-        if (hasYeast && honeyAmount > 0 && isStarted == false)
+        if (!isStarted)
+        {
+            //Using cast expressions to convert honeyAmount and totalLiquidContent values to floats to allow division
+            float honeyAmountFloat = (float)honeyAmount;
+            float totalLiquidContentFloat = (float)totalLiquidContent;
+            //Sweetness is then expressed as a % of the total volume of the vessel
+            sweetness = honeyAmountFloat / totalLiquidContentFloat * 100;
+            //Then rounded to nearest whole number to make fermentation process more precise
+            sweetness = Mathf.Round(sweetness);
+        }
+
+        // This code checks if the vessel has both yeast and sweetness - if it does, fermentation begins
+        if (hasYeast && sweetness > 0 && isStarted == false)
         {
             StartCoroutine("fermentation");
             isStarted = true;
@@ -94,10 +116,10 @@ public class VesselManager : MonoBehaviour
     //The below coroutine over time converts the honey value into alcohol
     IEnumerator fermentation()
     {
-        while (alcohol < yeastTolerance)
+        while (alcohol < yeastTolerance && honeyAmount > 0)
         {
             yield return new WaitForSeconds(5f);
-            honeyAmount = honeyAmount - 10;
+            sweetness = sweetness - 0.5f;
             alcohol = alcohol + 1;
             
         }
