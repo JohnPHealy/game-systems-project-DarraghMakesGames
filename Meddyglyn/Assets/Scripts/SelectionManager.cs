@@ -5,26 +5,15 @@ using UnityEngine;
 public class SelectionManager : MonoBehaviour
 {
 
-    [SerializeField] private Material highlightMaterial;
-    [SerializeField] private Material defaultMaterial;
-    [SerializeField] string selectableTag = "Selectable";
     [SerializeField] private Transform _selection;
     [SerializeField] private GameObject interactionPrompt;
-
-
-
 
     void Update()
     {
 
         if (_selection != null)
         {
-
-            //var selectionRenderer = _selection.GetComponent<Renderer>();
-            //selectionRenderer.material = defaultMaterial;
-            _selection.gameObject.GetComponent<Outline>().enabled = false;
             interactionPrompt.gameObject.SetActive(false);
-
             _selection = null;
         }
 
@@ -35,15 +24,6 @@ public class SelectionManager : MonoBehaviour
             var selection = hit.transform;
                 if (selection.CompareTag("Selectable") || selection.CompareTag("Ingredient") || selection.CompareTag("Storage"))
             {
-                //hit.collider.gameObject.GetComponent<Outline>().enabled = true;
-                //var selectionRenderer = selection.GetComponent<Renderer>();
- 
-                //if (selectionRenderer != null)
-                //{
-                //    selectionRenderer.material = highlightMaterial;
-//
-                //}
-
                 _selection = selection;
                 interactionPrompt.gameObject.SetActive(true);
             }
