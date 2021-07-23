@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91aacd6b89358c48aa808353a6c75b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capacity: 500
   honeyAmount: 0
   age: 0
   alcohol: 0

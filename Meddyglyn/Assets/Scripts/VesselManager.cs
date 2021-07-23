@@ -23,7 +23,7 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private bool isStarted;
     [SerializeField] public int alcohol;
     [SerializeField] private int yeastTolerance;
-    [SerializeField] private int totalLiquidContent;
+    [SerializeField] public int totalLiquidContent;
     [SerializeField] private int maxLiquidContent;
     [SerializeField] private int ingredientAmount;
     [SerializeField] private int capacityRemaining;
@@ -88,6 +88,11 @@ public class VesselManager : MonoBehaviour
                         {
                         Debug.Log("Vessel to fill the bottle");
                         carriedObj.gameObject.SendMessage("Fill", vesselObj);
+                                //If transferring to the storage container would fully empty the vessel, this calls the EmptyVessel function to clear values
+                                if (totalLiquidContent < 1)
+                                    {
+                                        EmptyVessel();
+                                    }
                         }
         }
     }
@@ -123,6 +128,21 @@ public class VesselManager : MonoBehaviour
             alcohol = alcohol + 1;
             
         }
+    }
+
+    //This resets all varirables to their default value - vessel ready for next batch
+    public void EmptyVessel()
+    {
+        honeyAmount = 0;
+        waterAmount = 0;
+        totalLiquidContent = 0;
+        yeastAdd = 0;
+        hasYeast = false;
+        isStarted = false;
+        alcohol = 0;
+        yeastTolerance = 0;
+        ingredientAmount = 0;
+        capacityRemaining = maxLiquidContent;
     }
 
 }

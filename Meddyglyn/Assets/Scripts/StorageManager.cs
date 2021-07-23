@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StorageManager : MonoBehaviour
 {
-
+    [SerializeField] int capacity;
     [SerializeField] int honeyAmount;
     [SerializeField] int age;
     [SerializeField] int alcohol;
@@ -26,6 +26,7 @@ public class StorageManager : MonoBehaviour
             filled = true;
             honeyAmount = vessel.GetComponent<VesselManager>().honeyAmount;
             alcohol = vessel.GetComponent<VesselManager>().alcohol;
+            vessel.GetComponent<VesselManager>().totalLiquidContent = vessel.GetComponent<VesselManager>().totalLiquidContent - capacity;
             agingStarted = true;
             StartCoroutine("Aging");
         }
