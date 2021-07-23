@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -3756408341760368249}
   - component: {fileID: 5604150772765765458}
   - component: {fileID: -5239146444105210917}
+  - component: {fileID: 5718981002519802756}
   m_Layer: 0
   m_Name: Bottle500
   m_TagString: Storage
@@ -50,6 +51,14 @@ MonoBehaviour:
   age: 0
   alcohol: 0
   filled: 0
+  value: 0
+  sweetnessMarketValue: 0
+  alcoholMarketValue: 0
+  ageMarketValue: 0
+  sweetnessValue: 0
+  alcoholValue: 0
+  ageValue: 0
+  agingStarted: 0
 --- !u!54 &5604150772765765458
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80,6 +89,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5718981002519802756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540156074088408317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2f581f2193af542aa2b24f5a0cfcc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8080234616062877182
 GameObject:
   m_ObjectHideFlags: 0

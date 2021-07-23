@@ -12,7 +12,7 @@ public class SelectionManager : MonoBehaviour
 
 
 
-    // Update is called once per frame
+
     void Update()
     {
 
@@ -28,12 +28,12 @@ public class SelectionManager : MonoBehaviour
 
         var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 2f))
+        if (Physics.Raycast(ray, out hit, 3f))
         {
             var selection = hit.transform;
-                if (selection.CompareTag(selectableTag))
+                if (selection.CompareTag("Selectable") || selection.CompareTag("Ingredient") || selection.CompareTag("Storage"))
             {
-                hit.collider.gameObject.GetComponent<Outline>().enabled = true;
+                //hit.collider.gameObject.GetComponent<Outline>().enabled = true;
                 //var selectionRenderer = selection.GetComponent<Renderer>();
  
                 //if (selectionRenderer != null)
@@ -55,6 +55,7 @@ public class SelectionManager : MonoBehaviour
         {
             //Debug.Log("Interact");
             _selection.gameObject.SendMessage("Interacted");
+            _selection = null;
         }
         else
         {

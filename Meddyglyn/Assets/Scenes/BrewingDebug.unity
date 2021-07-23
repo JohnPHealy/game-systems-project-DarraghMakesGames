@@ -1242,7 +1242,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17202
+  m_Name: pb_Mesh17152
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2330,7 +2330,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17216
+  m_Name: pb_Mesh17164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4999,7 +4999,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17024
+  m_Name: pb_Mesh16974
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10855,6 +10855,9 @@ MonoBehaviour:
   waterAdd: 0
   yeastAdd: 0
   hasYeast: 0
+  sweetness: 0
+  honeyAmountFloat: 0
+  totalLiquidContentFloat: 0
   isStarted: 0
   alcohol: 0
   yeastTolerance: 0

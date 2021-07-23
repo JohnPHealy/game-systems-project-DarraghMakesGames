@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 8932512052073887804}
   - component: {fileID: 1904100545074999718}
   - component: {fileID: -1970730100167899352}
+  - component: {fileID: 8091785689328139643}
   m_Layer: 0
   m_Name: Water100
   m_TagString: Ingredient
@@ -177,3 +178,15 @@ MonoBehaviour:
   yeast: 0
   yeastTolerance: 0
   amount: 0
+--- !u!114 &8091785689328139643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936150696333784902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2f581f2193af542aa2b24f5a0cfcc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
