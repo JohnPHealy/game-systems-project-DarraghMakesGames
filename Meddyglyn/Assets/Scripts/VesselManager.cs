@@ -63,9 +63,9 @@ public class VesselManager : MonoBehaviour
                         //Ingredients are only added if there is room in the vessel
                         if (capacityRemaining > ingredientAmount || yeastAdd > 0)
                         {
-                            honeyAmount = honeyAmount + honeyAdd / 2;
+                            honeyAmount = honeyAmount + honeyAdd;
                             //honeyAdd = 0;
-                            waterAmount = waterAmount + waterAdd / 2;
+                            waterAmount = waterAmount + waterAdd;
                             //waterAdd = 0;
                             totalLiquidContent = waterAmount + honeyAmount;
 

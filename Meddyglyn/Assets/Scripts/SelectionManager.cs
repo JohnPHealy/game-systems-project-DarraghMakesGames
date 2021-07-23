@@ -8,7 +8,8 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
     [SerializeField] string selectableTag = "Selectable";
-    private Transform _selection;
+    [SerializeField] private Transform _selection;
+    [SerializeField] private GameObject interactionPrompt;
 
 
 
@@ -22,6 +23,7 @@ public class SelectionManager : MonoBehaviour
             //var selectionRenderer = _selection.GetComponent<Renderer>();
             //selectionRenderer.material = defaultMaterial;
             _selection.gameObject.GetComponent<Outline>().enabled = false;
+            interactionPrompt.gameObject.SetActive(false);
 
             _selection = null;
         }
@@ -43,6 +45,7 @@ public class SelectionManager : MonoBehaviour
                 //}
 
                 _selection = selection;
+                interactionPrompt.gameObject.SetActive(true);
             }
 
         }

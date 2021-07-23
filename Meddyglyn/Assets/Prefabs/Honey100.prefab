@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: -7609396782628327315}
   m_Layer: 0
   m_Name: Honey100
-  m_TagString: Selectable
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
