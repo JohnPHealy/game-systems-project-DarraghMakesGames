@@ -18,11 +18,10 @@ public class SelectionManager : MonoBehaviour
         }
 
         var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3f))
+        if (Physics.Raycast(ray, out RaycastHit hit, 3f))
         {
             var selection = hit.transform;
-                if (selection.CompareTag("Selectable") || selection.CompareTag("Ingredient") || selection.CompareTag("Storage"))
+            if (selection.CompareTag("Selectable") || selection.CompareTag("Ingredient") || selection.CompareTag("Storage"))
             {
                 _selection = selection;
                 interactionPrompt.gameObject.SetActive(true);
