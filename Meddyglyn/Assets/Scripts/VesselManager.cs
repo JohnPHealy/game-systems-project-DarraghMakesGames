@@ -9,25 +9,25 @@ public class VesselManager : MonoBehaviour
     private GameObject carriedObj;
     private Transform carried;
     
-    [SerializeField] public int honeyAmount;
+    public int honeyAmount;
     [SerializeField] private int honeyAdd;
-    [SerializeField] public int waterAmount;
+    public int waterAmount;
     [SerializeField] private int waterAdd;
     [SerializeField] private int yeastAdd;
-    [SerializeField] public bool hasYeast;
+    public bool hasYeast;
     [SerializeField] private float sweetness;
 
     [SerializeField] private float honeyAmountFloat;
     [SerializeField] private float totalLiquidContentFloat;
 
     [SerializeField] private bool isStarted;
-    [SerializeField] public int alcohol;
+    public int alcohol;
     [SerializeField] private int yeastTolerance;
-    [SerializeField] public int totalLiquidContent;
+    public int totalLiquidContent;
     [SerializeField] private int maxLiquidContent;
     [SerializeField] private int ingredientAmount;
     [SerializeField] private int capacityRemaining;
-    [SerializeField] public GameObject vesselObj;
+    public GameObject vesselObj;
 
     
 
@@ -113,19 +113,19 @@ public class VesselManager : MonoBehaviour
         // This code checks if the vessel has both yeast and sweetness - if it does, fermentation begins
         if (hasYeast && sweetness > 0 && isStarted == false)
         {
-            StartCoroutine("fermentation");
+            StartCoroutine("Fermentation");
             isStarted = true;
         }
     }
 
     //The below coroutine over time converts the honey value into alcohol
-    IEnumerator fermentation()
+    IEnumerator Fermentation()
     {
         while (alcohol < yeastTolerance && honeyAmount > 0)
         {
             yield return new WaitForSeconds(5f);
             sweetness = sweetness - 0.5f;
-            alcohol = alcohol + 1;
+            alcohol ++;
             
         }
     }

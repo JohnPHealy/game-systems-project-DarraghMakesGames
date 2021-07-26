@@ -9,7 +9,7 @@ public class StorageManager : MonoBehaviour
     [SerializeField] int age;
     [SerializeField] int alcohol;
     [SerializeField] bool filled = false;
-    [SerializeField] public int value;
+    public int value;
     [SerializeField] private int sweetnessMarketValue;
     [SerializeField] private int alcoholMarketValue;
     [SerializeField] private int ageMarketValue;
