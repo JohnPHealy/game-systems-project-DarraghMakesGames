@@ -10,10 +10,24 @@ public class VesselManager : MonoBehaviour
     private Transform carried;
     
     public int honeyAmount;
-    [SerializeField] private int honeyAdd;
     public int waterAmount;
+    public int citrusAmount;
+    public int tartAmount;
+    public int sourAmount;
+    public int bitterAmount;
+    public int woodyAmount;
+    public int pepperyAmount;
+    [SerializeField] private int honeyAdd;
     [SerializeField] private int waterAdd;
     [SerializeField] private int yeastAdd;
+    [SerializeField] private int citrusAdd;
+    [SerializeField] private int tartAdd;
+    [SerializeField] private int sourAdd;
+    [SerializeField] private int bitterAdd;
+    [SerializeField] private int woodyAdd;
+    [SerializeField] private int pepperyAdd;
+
+
     public bool hasYeast;
     [SerializeField] private float sweetness;
 
@@ -59,15 +73,26 @@ public class VesselManager : MonoBehaviour
                     honeyAdd = carriedObj.GetComponent<IngredientValues>().honey;
                     waterAdd = carriedObj.GetComponent<IngredientValues>().water;
                     yeastAdd = carriedObj.GetComponent<IngredientValues>().yeast;
-                        
-                        //Ingredients are only added if there is room in the vessel
-                        if (capacityRemaining > ingredientAmount || yeastAdd > 0)
+                    citrusAdd = carriedObj.GetComponent<IngredientValues>().citrus;
+                    tartAdd = carriedObj.GetComponent<IngredientValues>().tart;
+                    sourAdd = carriedObj.GetComponent<IngredientValues>().sour;
+                    bitterAdd = carriedObj.GetComponent<IngredientValues>().bitter;
+                    woodyAdd = carriedObj.GetComponent<IngredientValues>().woody;
+                    pepperyAdd = carriedObj.GetComponent<IngredientValues>().peppery;
+
+                //Ingredients are only added if there is room in the vessel
+                if (capacityRemaining >= ingredientAmount || yeastAdd > 0)
                         {
-                            honeyAmount = honeyAmount + honeyAdd;
-                            //honeyAdd = 0;
-                            waterAmount = waterAmount + waterAdd;
-                            //waterAdd = 0;
-                            totalLiquidContent = waterAmount + honeyAmount;
+                            honeyAmount += honeyAdd;
+                            waterAmount += waterAdd;
+                            citrusAmount += citrusAdd;
+                            tartAmount += tartAdd;
+                            sourAmount += sourAdd;
+                            bitterAmount += bitterAdd;
+                            woodyAmount += woodyAdd;
+                            pepperyAmount += pepperyAdd;
+
+                            totalLiquidContent += ingredientAmount;
 
                             if (yeastAdd > 0)
                             {
@@ -83,7 +108,7 @@ public class VesselManager : MonoBehaviour
 
                         }
                 }
-                    // If the carried object is of type "Storage", the following triggers the "Fill" function of the storage object
+                    // If the carried object is of type "Storage", the following triggers the "Fill" function of the storage object using this object as the parameter
                     else if (carriedObj.gameObject.CompareTag("Storage"))
                         {
                         Debug.Log("Vessel to fill the bottle");
@@ -118,13 +143,13 @@ public class VesselManager : MonoBehaviour
         }
     }
 
-    //The below coroutine over time converts the honey value into alcohol
+    //The below coroutine over time converts the sweetness value into alcohol
     IEnumerator Fermentation()
     {
         while (alcohol < yeastTolerance && honeyAmount > 0)
         {
             yield return new WaitForSeconds(5f);
-            sweetness = sweetness - 0.5f;
+            sweetness -= 0.5f;
             alcohol ++;
             
         }

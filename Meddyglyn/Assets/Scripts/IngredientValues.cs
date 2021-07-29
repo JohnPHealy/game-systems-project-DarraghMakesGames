@@ -10,6 +10,7 @@ public class IngredientValues : MonoBehaviour
     public int honey;
     public int water;
 
+    public int sweetness;
     public int citrus;
     public int tart;
     public int sour;
