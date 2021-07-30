@@ -7,18 +7,18 @@ public class IngredientValues : MonoBehaviour
     public int yeast;
     public int yeastTolerance;
 
-    public int honey;
-    public int water;
+    public float honey;
+    public float water;
 
-    public int sweetness;
-    public int citrus;
-    public int tart;
-    public int sour;
-    public int bitter;
-    public int woody;
-    public int peppery;
+    public float sweetness;
+    public float citrus;
+    public float tart;
+    public float sour;
+    public float bitter;
+    public float woody;
+    public float peppery;
 
 
-    public int amount;
+    public float amount;
 
 }

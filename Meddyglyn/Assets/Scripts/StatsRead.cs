@@ -8,9 +8,9 @@ public class StatsRead : MonoBehaviour
 {
 
     private TextMesh statsReadout;
-    private int honeyAmount;
-    private int waterAmount;
-    private int alcoholAmount;
+    private float honeyAmount;
+    private float waterAmount;
+    private float alcoholAmount;
     private GameObject vessel;
     private string yeastStatus;
 

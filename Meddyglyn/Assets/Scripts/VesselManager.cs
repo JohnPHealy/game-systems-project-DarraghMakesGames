@@ -9,43 +9,50 @@ public class VesselManager : MonoBehaviour
     private GameObject carriedObj;
     private Transform carried;
     
-    public int honeyAmount;
-    public int waterAmount;
-    public int citrusAmount;
-    public int tartAmount;
-    public int sourAmount;
-    public int bitterAmount;
-    public int woodyAmount;
-    public int pepperyAmount;
-    [SerializeField] private int honeyAdd;
-    [SerializeField] private int waterAdd;
-    [SerializeField] private int yeastAdd;
-    [SerializeField] private int citrusAdd;
-    [SerializeField] private int tartAdd;
-    [SerializeField] private int sourAdd;
-    [SerializeField] private int bitterAdd;
-    [SerializeField] private int woodyAdd;
-    [SerializeField] private int pepperyAdd;
+    public float honeyAmount;
+    public float waterAmount;
+    public float sweetnessAmount;
+    public float citrusAmount;
+    public float tartAmount;
+    public float sourAmount;
+    public float bitterAmount;
+    public float woodyAmount;
+    public float pepperyAmount;
 
+    public float honeyStrength;
+    public float sweetnessStrength;
+    public float citrusStrength;
+    public float tartStrength;
+    public float sourStrength;
+    public float bitterStrength;
+    public float woodyStrength;
+    public float pepperyStrength;
+
+    [SerializeField] private float honeyAdd;
+    [SerializeField] private float waterAdd;
+    [SerializeField] private float sweetnessAdd;
+    [SerializeField] private float yeastAdd;
+    [SerializeField] private float citrusAdd;
+    [SerializeField] private float tartAdd;
+    [SerializeField] private float sourAdd;
+    [SerializeField] private float bitterAdd;
+    [SerializeField] private float woodyAdd;
+    [SerializeField] private float pepperyAdd;
 
     public bool hasYeast;
-    [SerializeField] private float sweetness;
-
-    [SerializeField] private float honeyAmountFloat;
-    [SerializeField] private float totalLiquidContentFloat;
-
+    
     [SerializeField] private bool isStarted;
-    public int alcohol;
+    public float alcohol;
     [SerializeField] private int yeastTolerance;
-    public int totalLiquidContent;
-    [SerializeField] private int maxLiquidContent;
-    [SerializeField] private int ingredientAmount;
-    [SerializeField] private int capacityRemaining;
+    public float totalLiquidContent;
+    [SerializeField] private float maxLiquidContent;
+    [SerializeField] private float ingredientAmount;
+    [SerializeField] private float capacityRemaining;
     public GameObject vesselObj;
 
     
 
-    // Finding the CarriedObject gameObject as a target for retrieving values
+    // Finding the CarriedObject gameObject as a target & defining self as a variable
     void Start()
     {
         CarriedObject = GameObject.Find("CarriedObject");
@@ -67,11 +74,13 @@ public class VesselManager : MonoBehaviour
                 // If the carried object is of "Ingredient" type, values from that object are added to the vessel and the carried object is destroyed
                 if (carriedObj.gameObject.CompareTag("Ingredient"))
                 {
+                 
                     capacityRemaining = maxLiquidContent - totalLiquidContent;
 
                     ingredientAmount = carriedObj.GetComponent<IngredientValues>().amount;
                     honeyAdd = carriedObj.GetComponent<IngredientValues>().honey;
                     waterAdd = carriedObj.GetComponent<IngredientValues>().water;
+                    sweetnessAdd = carriedObj.GetComponent<IngredientValues>().sweetness;
                     yeastAdd = carriedObj.GetComponent<IngredientValues>().yeast;
                     citrusAdd = carriedObj.GetComponent<IngredientValues>().citrus;
                     tartAdd = carriedObj.GetComponent<IngredientValues>().tart;
@@ -85,6 +94,7 @@ public class VesselManager : MonoBehaviour
                         {
                             honeyAmount += honeyAdd;
                             waterAmount += waterAdd;
+                            sweetnessAmount += sweetnessAdd;
                             citrusAmount += citrusAdd;
                             tartAmount += tartAdd;
                             sourAmount += sourAdd;
@@ -92,7 +102,15 @@ public class VesselManager : MonoBehaviour
                             woodyAmount += woodyAdd;
                             pepperyAmount += pepperyAdd;
 
-                            totalLiquidContent += ingredientAmount;
+                            sweetnessStrength = sweetnessAmount / totalLiquidContent * 100;
+                            citrusStrength = citrusAmount / totalLiquidContent * 100;
+                            tartStrength = tartAmount / totalLiquidContent * 100;
+                            sourStrength = sourAmount / totalLiquidContent * 100;
+                            bitterStrength = bitterAmount / totalLiquidContent * 100;
+                            woodyStrength = woodyAmount / totalLiquidContent * 100;
+                            pepperyStrength = pepperyAmount / totalLiquidContent * 100;
+
+                    totalLiquidContent += ingredientAmount;
 
                             if (yeastAdd > 0)
                             {
@@ -126,17 +144,11 @@ public class VesselManager : MonoBehaviour
     {
         if (!isStarted)
         {
-            //Using cast expressions to convert honeyAmount and totalLiquidContent values to floats to allow division
-            float honeyAmountFloat = (float)honeyAmount;
-            float totalLiquidContentFloat = (float)totalLiquidContent;
-            //Sweetness is then expressed as a % of the total volume of the vessel
-            sweetness = honeyAmountFloat / totalLiquidContentFloat * 100;
-            //Then rounded to nearest whole number to make fermentation process more precise
-            sweetness = Mathf.Round(sweetness);
+
         }
 
         // This code checks if the vessel has both yeast and sweetness - if it does, fermentation begins
-        if (hasYeast && sweetness > 0 && isStarted == false)
+        if (hasYeast && honeyAmount > 0 && isStarted == false)
         {
             StartCoroutine("Fermentation");
             isStarted = true;
@@ -149,7 +161,7 @@ public class VesselManager : MonoBehaviour
         while (alcohol < yeastTolerance && honeyAmount > 0)
         {
             yield return new WaitForSeconds(5f);
-            sweetness -= 0.5f;
+            sweetnessAmount -= 0.5f;
             alcohol ++;
             
         }
