@@ -87,7 +87,7 @@ public class StorageManager : MonoBehaviour
         citrusMarketValue = MarketValues.citrusValue;
         tartMarketValue = MarketValues.tartValue;
         sourMarketValue = MarketValues.sourValue;
-        bitterMarketValue = MarketValues.sourValue;
+        bitterMarketValue = MarketValues.bitterValue;
         woodyMarketValue = MarketValues.woodyValue;
         pepperyMarketValue = MarketValues.pepperyValue;
 

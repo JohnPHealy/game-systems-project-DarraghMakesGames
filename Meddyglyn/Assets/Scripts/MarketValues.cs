@@ -103,6 +103,43 @@ public class MarketValues : MonoBehaviour
             }
 
 
+            //Unpopular flavour assignment
+            if (unpopularSelector == 1)
+            {
+                citrusValue = unpopularFlavour;
+                Debug.Log("Unpopular Flavour: Citrus");
+            }
+            else if (unpopularSelector == 2)
+            {
+                tartValue = unpopularFlavour;
+                Debug.Log("Unpopular Flavour: Tart");
+            }
+            else if (unpopularSelector == 3)
+            {
+                sourValue = unpopularFlavour;
+                Debug.Log("Unpopular Flavour: Sour");
+            }
+            else if (unpopularSelector == 4)
+            {
+                bitterValue = unpopularFlavour;
+                Debug.Log("Unpopular Flavour: Bitter");
+            }
+            else if (unpopularSelector == 5)
+            {
+                woodyValue = unpopularFlavour;
+                Debug.Log("Unpopular Flavour: Woody");
+            }
+            else if (unpopularSelector == 6)
+            {
+                pepperyValue = unpopularFlavour;
+                Debug.Log("Unpopular Flavour: Peppery");
+            }
+            else
+            {
+                Debug.Log("Unpopular flavour error");
+            }
+
+
 
         }
 
