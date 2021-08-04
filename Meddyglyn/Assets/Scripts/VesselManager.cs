@@ -102,6 +102,8 @@ public class VesselManager : MonoBehaviour
                             woodyAmount += woodyAdd;
                             pepperyAmount += pepperyAdd;
 
+
+                            honeyStrength = honeyAmount / totalLiquidContent * 100;
                             sweetnessStrength = sweetnessAmount / totalLiquidContent * 100;
                             citrusStrength = citrusAmount / totalLiquidContent * 100;
                             tartStrength = tartAmount / totalLiquidContent * 100;

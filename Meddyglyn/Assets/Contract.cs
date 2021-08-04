@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Card")]
+[CreateAssetMenu(menuName = "Contract")]
 public class Contract : ScriptableObject
 {
     public string title;
