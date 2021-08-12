@@ -9,6 +9,7 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private Transform _selection;
     [SerializeField] private GameObject interactionPrompt;
     [SerializeField] private GameObject reticle;
+    public string interactText;
     public bool cooldown = false;
     private Image reticleRenderer;
 
@@ -36,6 +37,7 @@ public class SelectionManager : MonoBehaviour
             {
                 //If the raycast hits an object matching one of the interactable tags, it stores that as "_selection" and sets the interaction prompt to active and the cursor to yellow
                 _selection = selection;
+                interactText = selection.GetComponent<InteractionPrompt>().interactionText;
                 interactionPrompt.gameObject.SetActive(true);
                 //reticleRenderer.material.color = Color.yellow;
             }
