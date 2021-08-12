@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1397
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 305
+  controlID: 2490
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 275
+  controlID: 2491
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 276
+  controlID: 2492
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 292}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 306
+  controlID: 2437
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -449,9 +449,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 4afbffff
+      m_SelectedIDs: 00480000
+      m_LastClickedID: 18432
+      m_ExpandedIDs: 4afbffff56480000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c262c1329a02fa49b5cb4c297106f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 129, y: 28}
+  m_MinSize: {x: 133, y: 30}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: ProBuilder
@@ -536,9 +536,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -20.652515, y: 6.2444873, z: -13.907296}
+    m_Target: {x: -15.717939, y: 4.7275133, z: -12.295153}
     speed: 2
-    m_Value: {x: -20.652515, y: 6.2444873, z: -13.907296}
+    m_Value: {x: -15.717939, y: 4.7275133, z: -12.295153}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -585,13 +585,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.038484067, y: -0.9122426, z: 0.08812655, w: 0.39823183}
+    m_Target: {x: -0.005229783, y: 0.97859544, z: -0.20429769, w: -0.024969338}
     speed: 2
-    m_Value: {x: 0.03894663, y: -0.9126954, z: 0.08955234, w: 0.3968006}
+    m_Value: {x: -0.0052297823, y: 0.9785954, z: -0.20429769, w: -0.024969336}
   m_Size:
     m_Target: 4.5947504
     speed: 2
-    m_Value: 4.8947506
+    m_Value: 4.5947504
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -654,21 +654,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Player
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Player
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\darra\Documents\GitHub\game-systems-project-DarraghMakesGames\Meddyglyn
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 10be0000
-    m_LastClickedID: 48656
+    m_SelectedIDs: 6abf0000
+    m_LastClickedID: 49002
     m_ExpandedIDs: 0000000010be000012be000014be000016be000018be00001abe00001cbe00001ebe000020be000022be000024be000026be000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 3
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
