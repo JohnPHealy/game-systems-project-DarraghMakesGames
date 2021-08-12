@@ -141,13 +141,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yeast: 0
   yeastTolerance: 0
+  isWater: 0
   honey: 0
-  water: 0
-  sweetness: 5
+  sweetness: 0
   citrus: 0
   tart: 0
   sour: 0
   bitter: 0
   woody: 0
-  peppery: 5
-  amount: 0
+  peppery: 500
+  amount: 100

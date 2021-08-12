@@ -11,7 +11,7 @@ public class GoldCount : MonoBehaviour
 
     private void Update()
     {
-        goldReadout.text = "GOLD: " + gold;
+        goldReadout.text = gold + "gp";
     }
 
     //Function to reduce gold count by the amount defined in "cost"
