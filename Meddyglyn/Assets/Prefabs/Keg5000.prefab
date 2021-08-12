@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2917454457507710492}
   - component: {fileID: 6993664694655782792}
   - component: {fileID: 7958751714325110233}
+  - component: {fileID: -8527360040273600708}
   m_Layer: 0
   m_Name: Keg5000
   m_TagString: Storage
@@ -106,6 +107,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2f581f2193af542aa2b24f5a0cfcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8527360040273600708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541552492214000413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Pick up Keg (5000ml)
 --- !u!1 &7648747925572926968
 GameObject:
   m_ObjectHideFlags: 0

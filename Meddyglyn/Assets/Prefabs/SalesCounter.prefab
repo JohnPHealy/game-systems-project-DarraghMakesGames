@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6975482124596920791}
   - component: {fileID: 6975482124596920792}
   - component: {fileID: 6975482124596920793}
+  - component: {fileID: -4785273668306883032}
   m_Layer: 0
   m_Name: SalesCounter
   m_TagString: Selectable
@@ -110,6 +111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9389eb4ab497b4c8a928ebe4f88457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4785273668306883032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165308388925869696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Sell Held Item
 --- !u!1 &5306261220663820013
 GameObject:
   m_ObjectHideFlags: 0

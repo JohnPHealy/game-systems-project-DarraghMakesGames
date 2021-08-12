@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5831762936046636565}
   - component: {fileID: 5831762936046636564}
   - component: {fileID: 5831762936046636567}
+  - component: {fileID: 7324009154222939795}
   m_Layer: 0
   m_Name: KegPosition
   m_TagString: Selectable
@@ -142,6 +143,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baab6145c54e97545a9ed09a98ea78cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7324009154222939795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831762936046636561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Keg Storage
 --- !u!1 &5831762936629672941
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +229,7 @@ GameObject:
   - component: {fileID: 5831762937174572244}
   - component: {fileID: 5831762937174572247}
   - component: {fileID: 5831762937174572246}
+  - component: {fileID: 7772790859731807830}
   m_Layer: 0
   m_Name: KegPosition
   m_TagString: Selectable
@@ -311,6 +326,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baab6145c54e97545a9ed09a98ea78cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7772790859731807830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831762937174572240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Keg Storage
 --- !u!1001 &5831762936920739714
 PrefabInstance:
   m_ObjectHideFlags: 0

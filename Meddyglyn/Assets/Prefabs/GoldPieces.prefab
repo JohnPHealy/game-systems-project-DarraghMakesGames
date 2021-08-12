@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5392533359515604694}
   - component: {fileID: 8724907593006914902}
   - component: {fileID: 4689861563054640702}
+  - component: {fileID: -1961016214590522397}
   m_Layer: 0
   m_Name: GoldPieces
   m_TagString: Selectable
@@ -59,6 +60,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.13235408, y: 0.038160518, z: 0.13622229}
   m_Center: {x: 0.0060733557, y: 0.01980459, z: 0.0038304701}
+--- !u!114 &-1961016214590522397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051262026048096352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Pick up Gold
 --- !u!1001 &3568867100297391815
 PrefabInstance:
   m_ObjectHideFlags: 0

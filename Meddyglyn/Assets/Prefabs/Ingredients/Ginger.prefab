@@ -105,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1942896733635410593}
   - component: {fileID: 50931241661153142}
+  - component: {fileID: -4164747454455709313}
   m_Layer: 0
   m_Name: Ginger
   m_TagString: Ingredient
@@ -151,3 +152,16 @@ MonoBehaviour:
   woody: 0
   peppery: 500
   amount: 100
+--- !u!114 &-4164747454455709313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6312004573152764951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Pick up Ginger

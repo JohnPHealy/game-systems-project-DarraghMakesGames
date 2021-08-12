@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class InteractionUIUpdater : MonoBehaviour
 {
-    private string interactionText;
+    public string interactionText;
     private TextMesh interactPrompt;
     [SerializeField] GameObject selectionManager;
 
     private void Start()
     {
-        this.gameObject.GetComponent<TextMesh>();
+        interactPrompt = this.gameObject.GetComponent<TextMesh>();
     }
 
     void Update()
     {
-        interactionText = selectionManager.GetComponent<SelectionManager>().interactText; 
+        interactionText = selectionManager.GetComponent<SelectionManager>().interactText;
+        interactPrompt.text = interactionText;
     }
 }

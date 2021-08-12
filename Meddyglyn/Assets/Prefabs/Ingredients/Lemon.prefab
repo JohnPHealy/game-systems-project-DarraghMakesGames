@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2591560232079451930}
   - component: {fileID: 7250398599296587148}
   - component: {fileID: -3267715267211229894}
+  - component: {fileID: 4029899628391277169}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Ingredient
@@ -102,6 +103,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2f581f2193af542aa2b24f5a0cfcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4029899628391277169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295824186542246892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Pick up Lemon
 --- !u!1 &3167488247764349515
 GameObject:
   m_ObjectHideFlags: 0

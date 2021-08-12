@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5961282235897853574}
   - component: {fileID: -2703735131370595419}
   - component: {fileID: 2538594068226505397}
+  - component: {fileID: -1028727449482124424}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Ingredient
@@ -102,6 +103,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2f581f2193af542aa2b24f5a0cfcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1028727449482124424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295824186542246892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Pick up Apple
 --- !u!64 &4897951724521491331
 MeshCollider:
   m_ObjectHideFlags: 0
