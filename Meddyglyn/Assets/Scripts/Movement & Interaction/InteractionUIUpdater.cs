@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InteractionUIUpdater : MonoBehaviour
 {
     public string interactionText;
-    private TextMesh interactPrompt;
-    [SerializeField] GameObject selectionManager;
+    private Text readout;
+    public string readoutText;
+    public string testString;
 
-    private void Start()
+    private void Awake()
     {
-        interactPrompt = this.gameObject.GetComponent<TextMesh>();
+        readout = GetComponent<Text>();
     }
 
     void Update()
     {
-        interactionText = selectionManager.GetComponent<SelectionManager>().interactText;
-        interactPrompt.text = interactionText;
+            readout = GetComponent<Text>();
+            readout.text = interactionText;
     }
 }

@@ -8,23 +8,27 @@ public class SelectionManager : MonoBehaviour
 
     [SerializeField] private Transform _selection;
     [SerializeField] private GameObject interactionPrompt;
-    [SerializeField] private GameObject reticle;
+    //[SerializeField] private GameObject reticle;
     public string interactText;
     public bool cooldown = false;
     private Image reticleRenderer;
 
     private void Start()
     {
-        reticleRenderer = reticle.GetComponent<Image>();
+        //reticleRenderer = reticle.GetComponent<Image>();
     }
 
     void Update()
     {
+        
+
 
         if (_selection != null)
         {
             //If there is no selection, removes the interaction prompt, clears the "_selection" variable and resets reticle colour to default
-            interactionPrompt.gameObject.SetActive(false);
+
+            interactText = null;
+            interactionPrompt.SetActive(false);
             //reticleRenderer.material.color = Color.white;
             _selection = null;
         }
@@ -33,16 +37,21 @@ public class SelectionManager : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, 3f))
         {
             var selection = hit.transform;
+            
             if (selection.CompareTag("Selectable") || selection.CompareTag("Ingredient") || selection.CompareTag("Storage"))
             {
-                //If the raycast hits an object matching one of the interactable tags, it stores that as "_selection" and sets the interaction prompt to active and the cursor to yellow
+                //If the raycast hits an object matching one of the interactable tags, it stores that as "_selection"
                 _selection = selection;
-                interactText = selection.GetComponent<InteractionPrompt>().interactionText;
-                interactionPrompt.gameObject.SetActive(true);
+                //The following enables the interaction prompt UI element & updates its text based on the selection
+                interactionPrompt.SetActive(true);
+                interactText = _selection.GetComponent<InteractionPrompt>().interactionText;
+                interactionPrompt.GetComponent<InteractionUIUpdater>().interactionText = interactText;
+
                 //reticleRenderer.material.color = Color.yellow;
             }
 
         }
+        
     }
 
     //Interaction script - sends message to activate "Interacted" script on highlighted object
@@ -54,7 +63,7 @@ public class SelectionManager : MonoBehaviour
             _selection.gameObject.SendMessage("Interacted");
             _selection = null;
             cooldown = true;
-            StartCoroutine("cooldownTimer");
+            StartCoroutine("CooldownTimer");
         }
         else
         {
@@ -64,7 +73,7 @@ public class SelectionManager : MonoBehaviour
     }
 
     //This cooldown timer prevents "Interact" from firing too quickly
-    IEnumerator cooldownTimer()
+    IEnumerator CooldownTimer()
     {
         yield return new WaitForSeconds(0.5f);
         cooldown = false;

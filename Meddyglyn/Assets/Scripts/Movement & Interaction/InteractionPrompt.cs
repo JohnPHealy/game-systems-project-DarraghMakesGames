@@ -5,6 +5,6 @@ using UnityEngine;
 public class InteractionPrompt : MonoBehaviour
 {
 
-    [SerializeField] public string interactionText;
+    public string interactionText;
 
 }
