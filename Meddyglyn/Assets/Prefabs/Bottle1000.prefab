@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: -5239146444105210917}
   - component: {fileID: 5718981002519802756}
   - component: {fileID: -2625015374901063972}
+  - component: {fileID: 6706114777013137810}
   m_Layer: 0
   m_Name: Bottle1000
   m_TagString: Storage
@@ -263,6 +264,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Bottle (1000ml)
+--- !u!114 &6706114777013137810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540156074088408317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examinePopup: {fileID: 0}
+  testExamine: This is a bottle
 --- !u!1001 &2885965993709622526
 PrefabInstance:
   m_ObjectHideFlags: 0
