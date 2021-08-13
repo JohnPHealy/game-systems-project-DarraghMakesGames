@@ -18,14 +18,11 @@ public class PlayerMovement : MonoBehaviour
     private float lookX;
     private float lookY;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         playerController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Horizontal movement

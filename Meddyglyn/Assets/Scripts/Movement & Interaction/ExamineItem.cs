@@ -11,6 +11,7 @@ public class ExamineItem : MonoBehaviour
     public void Examine()
     {
         Debug.Log("Examining held item thoroughly");
+        examinePopup.SetActive(true);
         Debug.Log(testExamine);
     }
 

@@ -40,12 +40,14 @@ public class ExamineObject : MonoBehaviour
 
         Debug.Log("Examine");
 
+        //This closes the examination window if it is open
         if (examinePopup.activeSelf && !cooldown)
         {
             examinePopup.SetActive(false);
             cooldown = true;
             StartCoroutine("CooldownTimer");
-
+            
+        //If the player is carrying an object, this examines that object
         }
         else if (carrying.transform.childCount > 0 && !cooldown && !examinePopup.activeSelf)
         {
@@ -57,6 +59,7 @@ public class ExamineObject : MonoBehaviour
 
         }
 
+        //If the player is not carrying an object, this examines whatever they are looking at
         else if (_selection != null && !cooldown)
         {
             Debug.Log("Examining world");
@@ -65,6 +68,8 @@ public class ExamineObject : MonoBehaviour
             cooldown = true;
             StartCoroutine("CooldownTimer");
         }
+
+        //If the player is neither carrying an object nor holding anything, nothing happens.
         else
         {
             return;
@@ -72,7 +77,7 @@ public class ExamineObject : MonoBehaviour
 
     }
 
-    //This cooldown timer prevents "Interact" from firing too quickly
+    //This cooldown timer prevents "Examine" from firing too quickly
     IEnumerator CooldownTimer()
     {
         yield return new WaitForSeconds(0.5f);

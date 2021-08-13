@@ -9,10 +9,10 @@ public class InteractionUIUpdater : MonoBehaviour
     public string interactionText;
     private Text readout;
     public string readoutText;
-    public string testString;
 
     private void Awake()
     {
+        StartCoroutine("UpdateText");
         readout = GetComponent<Text>();
     }
 
@@ -20,5 +20,14 @@ public class InteractionUIUpdater : MonoBehaviour
     {
             readout = GetComponent<Text>();
             readout.text = interactionText;
+            readoutText = interactionText;
+    }
+
+    IEnumerator UpdateText()
+    {
+        readout = GetComponent<Text>();
+        readout.text = interactionText;
+        readoutText = interactionText;
+        yield return new WaitForSeconds(0.1f);
     }
 }
