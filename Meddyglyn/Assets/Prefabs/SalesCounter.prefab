@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6975482124596920792}
   - component: {fileID: 6975482124596920793}
   - component: {fileID: -4785273668306883032}
+  - component: {fileID: 2093632411830690320}
   m_Layer: 0
   m_Name: SalesCounter
   m_TagString: Selectable
@@ -124,6 +125,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Sell Held Item
+--- !u!114 &2093632411830690320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165308388925869696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Sales Counter
+  uiDescription: If you put things here, people will buy them. Hopefully. Eventually.
+  uiProperties: 
 --- !u!1 &5306261220663820013
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1732661797423623331}
   - component: {fileID: 1732661797423623328}
   - component: {fileID: 3037839220992102515}
+  - component: {fileID: 1292413182604832254}
   m_Layer: 0
   m_Name: Vessel5000
   m_TagString: Selectable
@@ -1824,6 +1825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca5475ca8af84746a592dd787efec50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cork: {fileID: 1732661799107770583}
   liquidLevel: {fileID: 1732661799107824627}
   honeyAmount: 0
   waterAmount: 0
@@ -1906,6 +1908,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Brewing Vessel (5000ml)
+--- !u!114 &1292413182604832254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467240574105448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Brewing Vessel (5000ml)
+  uiDescription: Mix your ingredients in here and wait to get mead!
+  uiProperties: 
 --- !u!1 &1732661799028745323
 GameObject:
   m_ObjectHideFlags: 0

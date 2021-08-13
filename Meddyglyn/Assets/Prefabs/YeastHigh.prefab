@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: -1970730100167899352}
   - component: {fileID: 6551915809704792268}
   - component: {fileID: -5606750502499432579}
+  - component: {fileID: 7543128713479772928}
   m_Layer: 0
   m_Name: YeastHigh
   m_TagString: Ingredient
@@ -393,4 +394,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c834b955287e8db4a9cf17a89897bc4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionText: Pick up Yeast (5% Tolerance)
+  interactionText: Pick up Yeast (15% Tolerance)
+--- !u!114 &7543128713479772928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936150696333784902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Yeast (15%)
+  uiDescription: Turns the sugar in honey into alcohol. This one will go to 15% alcohol
+    by volume.
+  uiProperties: Reduces sweetness proportionally.

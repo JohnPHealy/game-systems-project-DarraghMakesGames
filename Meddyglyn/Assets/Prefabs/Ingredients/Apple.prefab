@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -2703735131370595419}
   - component: {fileID: 2538594068226505397}
   - component: {fileID: -1028727449482124424}
+  - component: {fileID: 2028833131717180522}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Ingredient
@@ -116,6 +117,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Apple
+--- !u!114 &2028833131717180522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295824186542246892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Apple
+  uiDescription: Green, crisp, tart & crunchy. One a day keeps doctors away.
+  uiProperties: Tart++, 100ml
 --- !u!64 &4897951724521491331
 MeshCollider:
   m_ObjectHideFlags: 0

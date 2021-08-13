@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6993664694655782792}
   - component: {fileID: 7958751714325110233}
   - component: {fileID: -8527360040273600708}
+  - component: {fileID: 235751469714629855}
   m_Layer: 0
   m_Name: Keg5000
   m_TagString: Storage
@@ -120,6 +121,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Keg (5000ml)
+--- !u!114 &235751469714629855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541552492214000413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Keg (5000ml)
+  uiDescription: An oak keg, made for storing and aging alcohol. Anyone know how
+    to tap it?
+  uiProperties: 
 --- !u!1 &7648747925572926968
 GameObject:
   m_ObjectHideFlags: 0

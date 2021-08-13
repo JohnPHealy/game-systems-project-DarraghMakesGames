@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 1942896733635410593}
   - component: {fileID: 50931241661153142}
   - component: {fileID: 3803786443708259160}
+  - component: {fileID: -6465380708643116016}
   m_Layer: 0
   m_Name: Clove
   m_TagString: Ingredient
@@ -165,3 +166,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Clove
+--- !u!114 &-6465380708643116016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6312004573152764951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Cloves
+  uiDescription: Spicy, bitter little rascals. Used in desserts and roast dinners.
+    Thinks its better than you.
+  uiProperties: Bitter+, Peppery+, 100ml

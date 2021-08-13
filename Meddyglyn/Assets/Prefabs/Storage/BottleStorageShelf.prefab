@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3520107558176535557}
   - component: {fileID: 3520107558176535558}
   - component: {fileID: 108494543207744509}
+  - component: {fileID: 812299053489105199}
   m_Layer: 0
   m_Name: Storage2
   m_TagString: Selectable
@@ -124,6 +125,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Bottle Storage
+--- !u!114 &812299053489105199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520107558176535560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Bottle Storage
+  uiDescription: Leave your bottles here to age them. Or just to put them in a time-out,
+    I guess.
+  uiProperties: 
 --- !u!1 &3520107558321120317
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +598,7 @@ GameObject:
   - component: {fileID: 3520107558866109451}
   - component: {fileID: 3520107558866109452}
   - component: {fileID: 8053660820580732153}
+  - component: {fileID: 1843360850412411765}
   m_Layer: 0
   m_Name: Storage1
   m_TagString: Selectable
@@ -688,6 +709,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Bottle Storage
+--- !u!114 &1843360850412411765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520107558866109454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Bottle Storage
+  uiDescription: Leave your bottles here to age them. Or just to put them in a time-out,
+    I guess.
+  uiProperties: 
 --- !u!1 &3520107559773878210
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +772,7 @@ GameObject:
   - component: {fileID: 3520107559859460190}
   - component: {fileID: 3520107559859460191}
   - component: {fileID: 7240482045703273896}
+  - component: {fileID: 6141200000313176286}
   m_Layer: 0
   m_Name: Storage3
   m_TagString: Selectable
@@ -842,6 +883,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Bottle Storage
+--- !u!114 &6141200000313176286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520107559859460193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Bottle Storage
+  uiDescription: Leave your bottles here to age them. Or just to put them in a time-out,
+    I guess.
+  uiProperties: 
 --- !u!1 &8431593372171906873
 GameObject:
   m_ObjectHideFlags: 0

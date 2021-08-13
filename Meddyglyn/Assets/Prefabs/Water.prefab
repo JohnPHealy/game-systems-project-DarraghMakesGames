@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: -1970730100167899352}
   - component: {fileID: 8091785689328139643}
   - component: {fileID: 5440368972986538200}
+  - component: {fileID: 6283461108971563537}
   m_Layer: 0
   m_Name: Water
   m_TagString: Ingredient
@@ -196,6 +197,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb54730263f8b7428aa1d540267785b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+--- !u!114 &6283461108971563537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936150696333784902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Water
+  uiDescription: A bucket of water. What more can I say? You're 60% it.
+  uiProperties: Fills brewing vessel to the top, so add after everything but the
+    yeast.
 --- !u!1001 &798225604680840987
 PrefabInstance:
   m_ObjectHideFlags: 0

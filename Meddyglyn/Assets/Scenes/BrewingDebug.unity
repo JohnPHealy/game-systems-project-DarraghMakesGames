@@ -11497,6 +11497,7 @@ GameObject:
   - component: {fileID: 221098134}
   - component: {fileID: 221098133}
   - component: {fileID: 221098138}
+  - component: {fileID: 221098139}
   m_Layer: 0
   m_Name: CinnamonBuy
   m_TagString: Selectable
@@ -11850,6 +11851,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Cinnamon - 5 Gold
+--- !u!114 &221098139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221098131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Cinnamon Bowl
+  uiDescription: Woody++, 100ml
+  uiProperties: 
 --- !u!1001 &223048633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12167,6 +12186,7 @@ GameObject:
   - component: {fileID: 249996875}
   - component: {fileID: 249996874}
   - component: {fileID: 249996879}
+  - component: {fileID: 249996880}
   m_Layer: 0
   m_Name: LemonBuy
   m_TagString: Selectable
@@ -12527,6 +12547,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Lemon - 5 Gold
+--- !u!114 &249996880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249996872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Lemon Storage
+  uiDescription: Citrus+, Sour+, 100ml
+  uiProperties: 
 --- !u!43 &254539049
 Mesh:
   m_ObjectHideFlags: 0
@@ -23896,6 +23934,7 @@ GameObject:
   - component: {fileID: 361614596}
   - component: {fileID: 361614595}
   - component: {fileID: 361614600}
+  - component: {fileID: 361614601}
   m_Layer: 0
   m_Name: CloveBuy
   m_TagString: Selectable
@@ -24249,6 +24288,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Cloves - 5 Gold
+--- !u!114 &361614601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361614593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Cloves Bowl
+  uiDescription: Bitter+, Peppery+, 100ml
+  uiProperties: 
 --- !u!1001 &365795357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30944,6 +31001,7 @@ GameObject:
   - component: {fileID: 569053209}
   - component: {fileID: 569053208}
   - component: {fileID: 569053213}
+  - component: {fileID: 569053214}
   m_Layer: 0
   m_Name: GingerBuy
   m_TagString: Selectable
@@ -31297,6 +31355,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Ginger - 5 Gold
+--- !u!114 &569053214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569053206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Ginger Bowl
+  uiDescription: Peppery++, 100ml
+  uiProperties: 
 --- !u!1001 &570862833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31778,6 +31854,7 @@ GameObject:
   - component: {fileID: 584317676}
   - component: {fileID: 584317675}
   - component: {fileID: 584317681}
+  - component: {fileID: 584317682}
   m_Layer: 0
   m_Name: WaterSource
   m_TagString: Selectable
@@ -32130,6 +32207,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Water
+--- !u!114 &584317682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584317674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Water Bucket (Free)
+  uiDescription: Fills the vessel to the top with water
+  uiProperties: Add after all other ingredients!
 --- !u!1001 &589441993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32883,6 +32978,7 @@ GameObject:
   - component: {fileID: 616155722}
   - component: {fileID: 616155721}
   - component: {fileID: 616155727}
+  - component: {fileID: 616155728}
   m_Layer: 0
   m_Name: YeastShopMed
   m_TagString: Selectable
@@ -33235,6 +33331,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Yeast (10% Tolerance) - 10 Gold
+--- !u!114 &616155728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616155720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Yeast Bowl (10%)
+  uiDescription: Ferments the sugar in honey into alcohol. Reduces sweetness proportionally.
+  uiProperties: This one will ferment up to 10% alcohol per volume.
 --- !u!1 &617183526
 GameObject:
   m_ObjectHideFlags: 0
@@ -36451,6 +36565,7 @@ GameObject:
   - component: {fileID: 671624692}
   - component: {fileID: 671624691}
   - component: {fileID: 671624697}
+  - component: {fileID: 671624698}
   m_Layer: 0
   m_Name: YeastShopLow
   m_TagString: Selectable
@@ -36803,6 +36918,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Yeast (5% Tolerance) - 5 Gold
+--- !u!114 &671624698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671624690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Yeast Bowl (5%)
+  uiDescription: Ferments the sugar in honey into alcohol. Reduces sweetness proportionally.
+  uiProperties: This one will ferment up to 5% alcohol per volume.
 --- !u!1 &672759362
 GameObject:
   m_ObjectHideFlags: 0
@@ -38609,6 +38742,7 @@ GameObject:
   - component: {fileID: 702481988}
   - component: {fileID: 702481992}
   - component: {fileID: 702481993}
+  - component: {fileID: 702481994}
   m_Layer: 0
   m_Name: HoneyShopMed
   m_TagString: Selectable
@@ -38720,6 +38854,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Honey (250ml) - 10 Gold
+--- !u!114 &702481994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702481987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Honey Cup (250ml)
+  uiDescription: Sweetness++
+  uiProperties: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -40075,6 +40227,7 @@ GameObject:
   - component: {fileID: 753950267}
   - component: {fileID: 753950266}
   - component: {fileID: 753950272}
+  - component: {fileID: 753950273}
   m_Layer: 0
   m_Name: HoneyShopSmall
   m_TagString: Selectable
@@ -40427,6 +40580,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Honey (100ml) - 5 Gold
+--- !u!114 &753950273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753950265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Honey Cup (100ml)
+  uiDescription: Sweetness+
+  uiProperties: 
 --- !u!1001 &754298121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40618,6 +40789,7 @@ GameObject:
   - component: {fileID: 760384230}
   - component: {fileID: 760384229}
   - component: {fileID: 760384234}
+  - component: {fileID: 760384235}
   m_Layer: 0
   m_Name: MaceBuy
   m_TagString: Selectable
@@ -40970,6 +41142,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Mace - 5 Gold
+--- !u!114 &760384235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760384227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Mace Bowl
+  uiDescription: Bitter+, Woody+, 100ml
+  uiProperties: 
 --- !u!43 &775314759
 Mesh:
   m_ObjectHideFlags: 0
@@ -69722,6 +69912,7 @@ GameObject:
   - component: {fileID: 992481590}
   - component: {fileID: 992481589}
   - component: {fileID: 992481594}
+  - component: {fileID: 992481595}
   m_Layer: 0
   m_Name: AppleBuy
   m_TagString: Selectable
@@ -70085,6 +70276,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Apple - 5 Gold
+--- !u!114 &992481595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992481587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Apple Storage
+  uiDescription: Tart++, 100ml
+  uiProperties: 
 --- !u!1 &994879254
 GameObject:
   m_ObjectHideFlags: 0
@@ -71041,6 +71250,7 @@ GameObject:
   - component: {fileID: 1028278559}
   - component: {fileID: 1028278558}
   - component: {fileID: 1028278563}
+  - component: {fileID: 1028278564}
   m_Layer: 0
   m_Name: OrangeBuy
   m_TagString: Selectable
@@ -71408,6 +71618,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Orange - 5 Gold
+--- !u!114 &1028278564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028278556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Orange Storage
+  uiDescription: Citrus++, 100ml
+  uiProperties: 
 --- !u!1 &1034129904
 GameObject:
   m_ObjectHideFlags: 0
@@ -77930,6 +78158,7 @@ GameObject:
   - component: {fileID: 1204408010}
   - component: {fileID: 1204408009}
   - component: {fileID: 1204408014}
+  - component: {fileID: 1204408015}
   m_Layer: 0
   m_Name: HoneyShopLarge
   m_TagString: Selectable
@@ -78041,6 +78270,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Honey (1000ml) - 15 Gold
+--- !u!114 &1204408015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204408008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Honey Cup (1000ml)
+  uiDescription: Sweetness+++
+  uiProperties: 
 --- !u!1001 &1205945205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82033,6 +82280,7 @@ GameObject:
   - component: {fileID: 1347787016}
   - component: {fileID: 1347787015}
   - component: {fileID: 1347787021}
+  - component: {fileID: 1347787022}
   m_Layer: 0
   m_Name: YeastShopHigh
   m_TagString: Selectable
@@ -82385,6 +82633,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Yeast (15% Tolerance) - 15 Gold
+--- !u!114 &1347787022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347787014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Yeast Bowl (15%)
+  uiDescription: Ferments the sugar in honey into alcohol. Reduces sweetness proportionally.
+  uiProperties: This one will ferment up to 15% alcohol per volume.
 --- !u!1 &1358063248
 GameObject:
   m_ObjectHideFlags: 0
@@ -88712,6 +88978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca5475ca8af84746a592dd787efec50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cork: {fileID: 0}
   liquidLevel: {fileID: 0}
   honeyAmount: 0
   waterAmount: 0
@@ -92613,7 +92880,6 @@ MonoBehaviour:
   examineHolder: {fileID: 0}
   examinePopup: {fileID: 1838109118}
   examinedObject: {fileID: 0}
-  testExamine: This is a brewing vessel
   uiName: 
   uiDescription: 
   uiProperties: 
@@ -105289,7 +105555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1838109119
 RectTransform:
   m_ObjectHideFlags: 0
@@ -106661,6 +106927,7 @@ GameObject:
   - component: {fileID: 1864671752}
   - component: {fileID: 1864671751}
   - component: {fileID: 1864671756}
+  - component: {fileID: 1864671757}
   m_Layer: 0
   m_Name: CranberryBuy
   m_TagString: Selectable
@@ -107021,6 +107288,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Buy Cranberry - 5 Gold
+--- !u!114 &1864671757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864671749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Cranberry Storage
+  uiDescription: Tart+, Sour+, 100ml
+  uiProperties: 
 --- !u!1001 &1865341398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118878,7 +119163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1732661797423623353, guid: 0e5ebb6a5de1404448166c5a88b90729, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1732661797423623353, guid: 0e5ebb6a5de1404448166c5a88b90729, type: 3}
       propertyPath: m_AnchorMax.x

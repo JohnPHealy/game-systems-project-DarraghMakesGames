@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8724907593006914902}
   - component: {fileID: 4689861563054640702}
   - component: {fileID: -1961016214590522397}
+  - component: {fileID: -8934750661496970803}
   m_Layer: 0
   m_Name: GoldPieces
   m_TagString: Selectable
@@ -73,6 +74,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Gold
+--- !u!114 &-8934750661496970803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4051262026048096352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Gold pieces
+  uiDescription: Currency! Shiny, metallic. Makes a satisfying "clink" sound.
+  uiProperties: 
 --- !u!1001 &3568867100297391815
 PrefabInstance:
   m_ObjectHideFlags: 0

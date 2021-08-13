@@ -9,6 +9,7 @@ public class VesselManager : MonoBehaviour
     private GameObject carriedObj;
     private Transform carried;
 
+    [SerializeField] private GameObject cork;
     [SerializeField] private GameObject liquidLevel;
     
     public float honeyAmount;
@@ -75,7 +76,9 @@ public class VesselManager : MonoBehaviour
             carriedObj = carried.transform.gameObject;
 
                 // If the carried object is of "Ingredient" type, values from that object are added to the vessel and the carried object is destroyed
-                if (carriedObj.gameObject.CompareTag("Ingredient"))
+                
+            
+            if (carriedObj.gameObject.CompareTag("Ingredient"))
                 {
                  
                     
@@ -92,50 +95,61 @@ public class VesselManager : MonoBehaviour
                     woodyAdd = carriedObj.GetComponent<IngredientValues>().woody;
                     pepperyAdd = carriedObj.GetComponent<IngredientValues>().peppery;
 
-                //Ingredients are only added if there is room in the vessel
-                if (capacityRemaining >= ingredientAmount || yeastAdd > 0)
-                        {
-                            honeyAmount += honeyAdd;
-                            sweetnessAmount += sweetnessAdd;
-                            citrusAmount += citrusAdd;
-                            tartAmount += tartAdd;
-                            sourAmount += sourAdd;
-                            bitterAmount += bitterAdd;
-                            woodyAmount += woodyAdd;
-                            pepperyAmount += pepperyAdd;
-
-                    totalLiquidContent += ingredientAmount;
-
-                            if (yeastAdd > 0)
-                            {
-                                hasYeast = true;
-                                yeastTolerance = carriedObj.GetComponent<IngredientValues>().yeastTolerance;
-                            }
-
-                            if (isWater)
+                if (!isStarted)
+                {
+                    //Ingredients are only added if there is room in the vessel
+                    if (capacityRemaining >= ingredientAmount || yeastAdd > 0)
                     {
-                        waterAmount = capacityRemaining;
-                        totalLiquidContent = maxLiquidContent;
-                        capacityRemaining = 0;
-                    }
+                        honeyAmount += honeyAdd;
+                        sweetnessAmount += sweetnessAdd;
+                        citrusAmount += citrusAdd;
+                        tartAmount += tartAdd;
+                        sourAmount += sourAdd;
+                        bitterAmount += bitterAdd;
+                        woodyAmount += woodyAdd;
+                        pepperyAmount += pepperyAdd;
 
-                    honeyStrength = honeyAmount / totalLiquidContent * 100;
-                    sweetnessStrength = sweetnessAmount / totalLiquidContent * 100;
-                    citrusStrength = citrusAmount / totalLiquidContent * 100;
-                    tartStrength = tartAmount / totalLiquidContent * 100;
-                    sourStrength = sourAmount / totalLiquidContent * 100;
-                    bitterStrength = bitterAmount / totalLiquidContent * 100;
-                    woodyStrength = woodyAmount / totalLiquidContent * 100;
-                    pepperyStrength = pepperyAmount / totalLiquidContent * 100;
+                        totalLiquidContent += ingredientAmount;
 
-                    Destroy(carriedObj);
-                        }
-                        else
+                        if (yeastAdd > 0)
                         {
-                            Debug.Log("Not enough room in vessel");
-
+                            hasYeast = true;
+                            yeastTolerance = carriedObj.GetComponent<IngredientValues>().yeastTolerance;
                         }
+
+                        if (isWater)
+                        {
+                            waterAmount = capacityRemaining;
+                            totalLiquidContent = maxLiquidContent;
+                            capacityRemaining = 0;
+                        }
+
+                        honeyStrength = honeyAmount / totalLiquidContent * 100;
+                        sweetnessStrength = sweetnessAmount / totalLiquidContent * 100;
+                        citrusStrength = citrusAmount / totalLiquidContent * 100;
+                        tartStrength = tartAmount / totalLiquidContent * 100;
+                        sourStrength = sourAmount / totalLiquidContent * 100;
+                        bitterStrength = bitterAmount / totalLiquidContent * 100;
+                        woodyStrength = woodyAmount / totalLiquidContent * 100;
+                        pepperyStrength = pepperyAmount / totalLiquidContent * 100;
+
+                        Destroy(carriedObj);
+                    }
+                    else
+                    {
+                        Debug.Log("Not enough room in vessel");
+
+                    }
                 }
+
+                else if (isStarted)
+                {
+                    Debug.Log("Can't add more once ferment starts");
+                }
+
+                }
+
+
                     // If the carried object is of type "Storage", the following triggers the "Fill" function of the storage object using this object as the parameter
                     else if (carriedObj.gameObject.CompareTag("Storage"))
                         {
@@ -164,6 +178,7 @@ public class VesselManager : MonoBehaviour
         {
             StartCoroutine("Fermentation");
             isStarted = true;
+            cork.SetActive(true);
         }
     }
 
@@ -188,6 +203,7 @@ public class VesselManager : MonoBehaviour
         yeastAdd = 0;
         hasYeast = false;
         isStarted = false;
+        cork.SetActive(false);
         alcohol = 0;
         yeastTolerance = 0;
         ingredientAmount = 0;

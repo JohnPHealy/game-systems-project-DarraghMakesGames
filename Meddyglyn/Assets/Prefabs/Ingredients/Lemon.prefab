@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7250398599296587148}
   - component: {fileID: -3267715267211229894}
   - component: {fileID: 4029899628391277169}
+  - component: {fileID: -5151202201453144385}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Ingredient
@@ -116,6 +117,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Lemon
+--- !u!114 &-5151202201453144385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295824186542246892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Lemon
+  uiDescription: Zesty & sour. I dare you to take a bite. Double dare.
+  uiProperties: Citrus+, Sour+, 100ml
 --- !u!1 &3167488247764349515
 GameObject:
   m_ObjectHideFlags: 0

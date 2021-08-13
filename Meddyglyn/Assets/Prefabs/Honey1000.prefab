@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: -1970730100167899352}
   - component: {fileID: -7609396782628327315}
   - component: {fileID: 3010904403202191790}
+  - component: {fileID: 2510854771874676158}
   m_Layer: 0
   m_Name: Honey1000
   m_TagString: Ingredient
@@ -308,6 +309,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Honey (1000ml)
+--- !u!114 &2510854771874676158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936150696333784902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Honey (1000ml)
+  uiDescription: The base of every mead. Sweet & gold-coloured. Made by bees, for
+    bees.
+  uiProperties: 
 --- !u!1001 &6884746013510118995
 PrefabInstance:
   m_ObjectHideFlags: 0

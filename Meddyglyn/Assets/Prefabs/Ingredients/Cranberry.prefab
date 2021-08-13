@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: -8354332658315067455}
   - component: {fileID: 18505014677912573}
   - component: {fileID: -2063624459912134370}
+  - component: {fileID: 6706223381714497926}
   m_Layer: 0
   m_Name: Cranberry
   m_TagString: Ingredient
@@ -211,6 +212,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: Pick up Cranberries
+--- !u!114 &6706223381714497926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295824186542246892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a92c998a522554d967495b18a3eb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examineHolder: {fileID: 0}
+  examinePopup: {fileID: 0}
+  examinedObject: {fileID: 0}
+  uiName: Cranberries
+  uiDescription: Like tiny grapes with attitude. Tiny fruit, big taste.
+  uiProperties: Tart+, Sour+, 100ml
 --- !u!1 &8975023754868539905
 GameObject:
   m_ObjectHideFlags: 0
