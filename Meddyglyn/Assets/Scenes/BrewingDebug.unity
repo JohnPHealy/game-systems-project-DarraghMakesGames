@@ -89072,14 +89072,6 @@ MonoBehaviour:
   bitterValue: 0
   woodyValue: 0
   pepperyValue: 0
-  sweetRating: 
-  alcoholRating: 
-  citrusRating: 
-  tartRating: 
-  sourRating: 
-  bitterRating: 
-  woodyRating: 
-  pepperyRating: 
 --- !u!1 &1412784392
 GameObject:
   m_ObjectHideFlags: 0

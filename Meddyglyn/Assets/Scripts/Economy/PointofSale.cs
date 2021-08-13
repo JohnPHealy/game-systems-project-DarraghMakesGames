@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PointofSale : MonoBehaviour
 {
-
-    private GameObject MarketManager;
     private Transform forSale;
     [SerializeField] private GameObject gold;
     [SerializeField] Transform goldPosition;
@@ -21,18 +19,23 @@ public class PointofSale : MonoBehaviour
     private void Start()
     {
 
-        MarketManager = GameObject.Find("MarketManager");
 
     }
 
 
     void Update()
     {
+        preferredFlavour = MarketValues.preferredFlavourName;
+        unpopularFlavour = MarketValues.unpopularFlavourName;
+
         if (this.transform.childCount > 0)
         {
 
             forSale = this.gameObject.transform.GetChild(0);
             sellValue = forSale.GetComponent<StorageManager>().value;
+
+
+
             if (!hasItem)
             {
                 StartCoroutine("SellItem");

@@ -22,8 +22,8 @@ public class MarketValues : MonoBehaviour
     private float unpopularFlavour;
     public int unpopularSelector;
 
-    public string preferredFlavourName;
-    public string unpopularFlavourName;
+    public static string preferredFlavourName = "Citrus";
+    public static string unpopularFlavourName = "Bitter";
 
     [SerializeField] private float marketInterval = 15f;
 

@@ -29,18 +29,10 @@ public class ValueCalculator : MonoBehaviour
 
     private bool finished;
 
-    public string sweetRating;
-    public string alcoholRating;
-    public string citrusRating;
-    public string tartRating;
-    public string sourRating;
-    public string bitterRating;
-    public string woodyRating;
-    public string pepperyRating;
-
-
     private void Update()
     {
+        //This only runs until the fermentation process is finished - values are then static
+        //This is to preserve the value per ml while parts of the brew are removed & bottled
         finished = GetComponent<VesselManager>().isFinished;
 
         if (!finished)

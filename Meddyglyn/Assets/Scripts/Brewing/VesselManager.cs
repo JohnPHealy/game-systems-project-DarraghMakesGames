@@ -155,13 +155,22 @@ public class VesselManager : MonoBehaviour
                     // If the carried object is of type "Storage", the following triggers the "Fill" function of the storage object using this object as the parameter
                     else if (carriedObj.gameObject.CompareTag("Storage"))
                         {
-                        Debug.Log("Vessel to fill the bottle");
-                        carriedObj.gameObject.SendMessage("Fill", vesselObj);
+                        if (carriedObj.gameObject.GetComponent<StorageManager>().capacity <= totalLiquidContent && isFinished)
+                            {
+                                Debug.Log("Vessel to fill the bottle");
+                                carriedObj.gameObject.SendMessage("Fill", vesselObj);
                                 //If transferring to the storage container would fully empty the vessel, this calls the EmptyVessel function to clear values
                                 if (totalLiquidContent < 1)
-                                    {
-                                        EmptyVessel();
-                                    }
+                                {
+                                    EmptyVessel();
+                                }
+                            }
+
+                            else
+                            {
+                                Debug.Log("Not finished fermenting or not enough to fill container");
+                            }
+                        
                         }
         }
     }
@@ -201,11 +210,18 @@ public class VesselManager : MonoBehaviour
         }
     }
 
-    //This resets all varirables to their default value - vessel ready for next batch
+    //This resets all variables to their default value - vessel ready for next batch
     public void EmptyVessel()
     {
         honeyAmount = 0;
         waterAmount = 0;
+        sweetnessAmount = 0;
+        citrusAmount = 0;
+        tartAmount = 0;
+        sourAmount = 0;
+        bitterAmount = 0;
+        woodyAmount = 0;
+        pepperyAmount = 0;
         totalLiquidContent = 0;
         yeastAdd = 0;
         hasYeast = false;

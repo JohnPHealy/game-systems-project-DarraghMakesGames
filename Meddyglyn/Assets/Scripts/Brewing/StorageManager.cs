@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StorageManager : MonoBehaviour
 {
-    [SerializeField] float capacity;
+    public float capacity;
     [SerializeField] float storageValue;
     [SerializeField] float honeyAmount;
     [SerializeField] float sweetness;
@@ -16,6 +16,9 @@ public class StorageManager : MonoBehaviour
     [SerializeField] float peppery;
     [SerializeField] float age;
     [SerializeField] float alcohol;
+
+    public string sweetnessRating;
+    public string alcoholRating;
 
     public bool filled = false;
     public float value;
@@ -66,6 +69,44 @@ public class StorageManager : MonoBehaviour
     private void Update()
     {
         value = (valuePerML * capacity) + storageValue;
+
+        //This expresses the strength of the honey in human-readable terms
+        //0-5 is low, 6-10 is average, 11+ is high
+
+        if (sweetness <= 5)
+        {
+            sweetnessRating = "Low";
+        }
+        else if (sweetness > 5 && sweetness < 11)
+        {
+            sweetnessRating = "Average";
+        }
+        else if (sweetness >= 11)
+        {
+            sweetnessRating = "High";
+        }
+
+        //This expresses the strength of the alcohol in human-readable terms
+        //0-5 is low, 6-10 is average, 11+ is high
+
+        if (alcohol <= 5)
+        {
+            alcoholRating = "Low";
+        }
+        else if (alcohol > 5 && alcohol < 11)
+        {
+            alcoholRating = "Average";
+        }
+        else if (alcohol >= 11)
+        {
+            alcoholRating = "High";
+        }
+
+
+
+
+
+
     }
 
 
