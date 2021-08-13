@@ -228,7 +228,7 @@ MonoBehaviour:
   examinePopup: {fileID: 0}
   examinedObject: {fileID: 0}
   uiName: Cranberries
-  uiDescription: Like tiny grapes with attitude. Tiny fruit, big taste.
+  uiDescription: Like tiny grapes with attitude. Small fruit, big taste.
   uiProperties: Tart+, Sour+, 100ml
 --- !u!1 &8975023754868539905
 GameObject:
