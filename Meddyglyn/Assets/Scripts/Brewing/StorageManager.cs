@@ -6,16 +6,16 @@ public class StorageManager : MonoBehaviour
 {
     public float capacity;
     [SerializeField] float storageValue;
-    [SerializeField] float honeyAmount;
-    [SerializeField] float sweetness;
-    [SerializeField] float citrus;
-    [SerializeField] float tart;
-    [SerializeField] float sour;
-    [SerializeField] float bitter;
-    [SerializeField] float woody;
-    [SerializeField] float peppery;
-    [SerializeField] float age;
-    [SerializeField] float alcohol;
+    public float honeyAmount;
+    public float sweetness;
+    public float citrus;
+    public float tart;
+    public float sour;
+    public float bitter;
+    public float woody;
+    public float peppery;
+    public float age;
+    public float alcohol;
 
     public string sweetnessRating;
     public string alcoholRating;
@@ -30,6 +30,7 @@ public class StorageManager : MonoBehaviour
     {
         if (!filled)
         {
+            //The following fetches values from the brewing vessel that called this fill method
             Debug.Log("Filling bottle...");
             filled = true;
             honeyAmount = vessel.GetComponent<VesselManager>().honeyStrength;
@@ -44,7 +45,10 @@ public class StorageManager : MonoBehaviour
 
             valuePerML = vessel.GetComponent<ValueCalculator>().valuePerMl;
 
+            //This reduces the amount left in the vessel by the capacity of this storage
             vessel.GetComponent<VesselManager>().totalLiquidContent = vessel.GetComponent<VesselManager>().totalLiquidContent - capacity;
+
+            //Starts the aging process
             agingStarted = true;
             StartCoroutine("Aging");
         }
@@ -59,7 +63,7 @@ public class StorageManager : MonoBehaviour
     {
         while (agingStarted)
         {
-            yield return new WaitForSeconds(20f);
+            yield return new WaitForSeconds(30f);
             age++;
         }
 
@@ -68,7 +72,7 @@ public class StorageManager : MonoBehaviour
 
     private void Update()
     {
-        value = (valuePerML * capacity) + storageValue;
+        value = (valuePerML * capacity) + storageValue + age;
 
         //This expresses the strength of the honey in human-readable terms
         //0-5 is low, 6-10 is average, 11+ is high
@@ -102,7 +106,12 @@ public class StorageManager : MonoBehaviour
             alcoholRating = "High";
         }
 
-
+        //Stops aging once maximum aging has reached (5 minutes)
+        if (age >= 10)
+        {
+            StopCoroutine("Aging");
+            agingStarted = false;
+        }
 
 
 
