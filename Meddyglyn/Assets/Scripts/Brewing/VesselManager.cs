@@ -95,6 +95,7 @@ public class VesselManager : MonoBehaviour
                     woodyAdd = carriedObj.GetComponent<IngredientValues>().woody;
                     pepperyAdd = carriedObj.GetComponent<IngredientValues>().peppery;
 
+                //isStarted means fermentation has begun - if it has, the player cannot add ingredients
                 if (!isStarted)
                 {
                     //Ingredients are only added if there is room in the vessel
