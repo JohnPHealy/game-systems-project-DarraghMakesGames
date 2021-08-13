@@ -83,9 +83,10 @@
     <Compile Include="Assets\Scripts\Movement &amp; Interaction\InteractionPrompt.cs" />
     <Compile Include="Assets\Scripts\Movement &amp; Interaction\PickupItem.cs" />
     <Compile Include="Assets\Scripts\StatsRead.cs" />
+    <Compile Include="Assets\Scripts\Movement &amp; Interaction\UpdateInteractionPrompt.cs" />
     <Compile Include="Assets\Scripts\Brewing\WaterBehaviour.cs" />
     <Compile Include="Assets\Scripts\GoldCount.cs" />
-    <Compile Include="Assets\Scripts\Movement &amp; Interaction\UpdateInteractionPrompt.cs" />
+    <Compile Include="Assets\Scripts\Movement &amp; Interaction\ExamineUIUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
