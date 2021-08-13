@@ -44,8 +44,9 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private float pepperyAdd;
 
     public bool hasYeast;
-    
+   
     [SerializeField] private bool isStarted;
+    public bool isFinished;
     public float alcohol;
     [SerializeField] private int yeastTolerance;
     public float totalLiquidContent;
@@ -175,7 +176,7 @@ public class VesselManager : MonoBehaviour
         capacityRemaining = maxLiquidContent - totalLiquidContent;
 
         // This code checks if the vessel has both yeast and sweetness - if it does, fermentation begins
-        if (hasYeast && honeyAmount > 0 && isStarted == false)
+        if (hasYeast && honeyAmount > 0 && isStarted == false && totalLiquidContent == maxLiquidContent)
         {
             StartCoroutine("Fermentation");
             isStarted = true;
@@ -191,6 +192,11 @@ public class VesselManager : MonoBehaviour
             yield return new WaitForSeconds(5f);
             sweetnessStrength -= 0.5f;
             alcohol ++;
+                if (alcohol == yeastTolerance)
+            {
+                isFinished = true;
+                StopCoroutine("Fermentation");
+            }
             
         }
     }
@@ -204,6 +210,7 @@ public class VesselManager : MonoBehaviour
         yeastAdd = 0;
         hasYeast = false;
         isStarted = false;
+        isFinished = false;
         cork.SetActive(false);
         alcohol = 0;
         yeastTolerance = 0;

@@ -27,29 +27,50 @@ public class ValueCalculator : MonoBehaviour
     [SerializeField] private float woodyValue;
     [SerializeField] private float pepperyValue;
 
+    private bool finished;
+
+    public string sweetRating;
+    public string alcoholRating;
+    public string citrusRating;
+    public string tartRating;
+    public string sourRating;
+    public string bitterRating;
+    public string woodyRating;
+    public string pepperyRating;
+
+
     private void Update()
     {
-        sweet = GetComponent<VesselManager>().sweetnessStrength;
-        alcohol = GetComponent<VesselManager>().alcohol;
-        citrus = GetComponent<VesselManager>().citrusStrength;
-        tart = GetComponent<VesselManager>().tartStrength;
-        sour = GetComponent<VesselManager>().sourStrength;
-        bitter = GetComponent<VesselManager>().bitterStrength;
-        woody = GetComponent<VesselManager>().bitterStrength;
-        peppery = GetComponent<VesselManager>().pepperyStrength;
-        batchAmount = GetComponent<VesselManager>().totalLiquidContent;
+        finished = GetComponent<VesselManager>().isFinished;
 
-        sweetValue = sweet * 2;
-        alcoholValue = alcohol * 2;
-        citrusValue = citrus;
-        tartValue = tart;
-        sourValue = sour;
-        bitterValue = bitter;
-        woodyValue = woody;
-        pepperyValue = peppery;
+        if (!finished)
+        {
+            sweet = GetComponent<VesselManager>().sweetnessStrength-0.5f;
+            alcohol = GetComponent<VesselManager>().alcohol+1;
+            citrus = GetComponent<VesselManager>().citrusStrength;
+            tart = GetComponent<VesselManager>().tartStrength;
+            sour = GetComponent<VesselManager>().sourStrength;
+            bitter = GetComponent<VesselManager>().bitterStrength;
+            woody = GetComponent<VesselManager>().bitterStrength;
+            peppery = GetComponent<VesselManager>().pepperyStrength;
+            batchAmount = GetComponent<VesselManager>().totalLiquidContent;
+
+            sweetValue = sweet * 2;
+            alcoholValue = alcohol * 2;
+            citrusValue = citrus;
+            tartValue = tart;
+            sourValue = sour;
+            bitterValue = bitter;
+            woodyValue = woody;
+            pepperyValue = peppery;
+        }
 
         rawValue = sweetValue + alcoholValue + citrusValue + tartValue + sourValue + bitterValue + woodyValue + pepperyValue;
         valuePerMl = rawValue / batchAmount;
+
+
+
+
 }
 
 

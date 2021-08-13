@@ -32998,7 +32998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e776197bb42356f43a2f81c560795217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemForSale: {fileID: 7936150696333784902, guid: c6502b98312415b4683dee2f46ebeab9, type: 3}
+  itemForSale: {fileID: 7936150696333784902, guid: c72b79ef6e90a6346b65ba1f22a0a8c2, type: 3}
   cost: 10
 --- !u!64 &616155722
 MeshCollider:
@@ -82304,7 +82304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e776197bb42356f43a2f81c560795217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemForSale: {fileID: 7936150696333784902, guid: c6502b98312415b4683dee2f46ebeab9, type: 3}
+  itemForSale: {fileID: 7936150696333784902, guid: bb2f0b3e32bfa4144909c4c35c5cc1e7, type: 3}
   cost: 15
 --- !u!64 &1347787016
 MeshCollider:
@@ -89033,6 +89033,7 @@ MonoBehaviour:
   pepperyAdd: 0
   hasYeast: 0
   isStarted: 0
+  isFinished: 0
   alcohol: 0
   yeastTolerance: 0
   totalLiquidContent: 0
@@ -89071,6 +89072,14 @@ MonoBehaviour:
   bitterValue: 0
   woodyValue: 0
   pepperyValue: 0
+  sweetRating: 
+  alcoholRating: 
+  citrusRating: 
+  tartRating: 
+  sourRating: 
+  bitterRating: 
+  woodyRating: 
+  pepperyRating: 
 --- !u!1 &1412784392
 GameObject:
   m_ObjectHideFlags: 0

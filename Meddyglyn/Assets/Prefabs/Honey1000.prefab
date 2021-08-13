@@ -275,15 +275,15 @@ MonoBehaviour:
   yeast: 0
   yeastTolerance: 0
   isWater: 0
-  honey: 500
-  sweetness: 500
+  honey: 1000
+  sweetness: 1000
   citrus: 0
   tart: 0
   sour: 0
   bitter: 0
   woody: 0
   peppery: 0
-  amount: 500
+  amount: 1000
 --- !u!114 &-7609396782628327315
 MonoBehaviour:
   m_ObjectHideFlags: 0
