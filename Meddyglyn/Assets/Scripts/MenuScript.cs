@@ -12,6 +12,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject playerCamera;
 
+
     public void PlayGame()
     {
 

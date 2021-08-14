@@ -245,6 +245,7 @@ public class VesselManager : MonoBehaviour
                 if (alcohol == yeastTolerance)
             {
                 isFinished = true;
+                GameManager.batchesMade += 1;
                 StopCoroutine("Fermentation");
             }
             

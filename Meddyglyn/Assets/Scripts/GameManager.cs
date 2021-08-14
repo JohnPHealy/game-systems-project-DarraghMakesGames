@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject player;
 
+    public static float batchesMade = 1;
+    public static float profit;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
