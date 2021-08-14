@@ -34,6 +34,9 @@ public class PointofSale : MonoBehaviour
     [SerializeField] private float preferredMultiplier;
     [SerializeField] private float unpopularMultiplier;
 
+    [SerializeField] private GameObject popularSold;
+    [SerializeField] private GameObject unpopularSold;
+
 
     void Update()
     {
@@ -104,6 +107,15 @@ public class PointofSale : MonoBehaviour
         //Instantiates a pile of gold coins and passes the sale value to the gold for pickup
         newGold = Instantiate(gold, goldPosition);
         newGold.SendMessage("SetValue", adjustedSellValue);
+
+        if (preferred > 0)
+        {
+            popularSold.SetActive(true);
+        }
+        if (unpopular > 0)
+        {
+            unpopularSold.SetActive(true);
+        }
 
     }
 

@@ -22,7 +22,6 @@ public class MenuScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
 
-
         mainMenu.SetActive(false);
     }
 
@@ -34,7 +33,8 @@ public class MenuScript : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("BrewingDemo");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("LoadingScene");
     }
 
 }
