@@ -15,13 +15,14 @@ public class ExamineItem : MonoBehaviour
 
     private void Start()
     {
-        examineHolder = GameObject.Find("ExamineHolder");
+
         examinedObject = this.gameObject;
     }
 
     public void Examine()
     {
         Debug.Log("Examining item thoroughly");
+        examineHolder = GameObject.Find("ExamineHolder");
         examinePopup = examineHolder.transform.GetChild(0).gameObject;
         examinePopup.SetActive(true);
         examinePopup.GetComponent<ExamineUIUpdate>().examinedObject = examinedObject;

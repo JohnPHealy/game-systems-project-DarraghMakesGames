@@ -21,4 +21,10 @@ public class MenuScript : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+    public void Quit()
+    {
+        Debug.Log("Quitting game...");
+        Application.Quit();
+    }
+
 }
