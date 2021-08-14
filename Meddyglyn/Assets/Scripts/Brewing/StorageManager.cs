@@ -34,12 +34,21 @@ public class StorageManager : MonoBehaviour
     public string woodyProp;
     public string pepperyProp;
 
+    private AudioSource fillingSound;
+
     [SerializeField] private bool agingStarted;
+
+    private void Start()
+    {
+        fillingSound = GetComponent<AudioSource>();
+    }
 
     public void Fill(GameObject vessel)
     {
         if (!filled)
         {
+            //Plays the sound of the vessel being filled
+            fillingSound.PlayOneShot(fillingSound.clip, 1);
             //The following fetches values from the brewing vessel that called this fill method
             Debug.Log("Filling bottle...");
             filled = true;

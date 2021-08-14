@@ -68,7 +68,7 @@ public class VesselManager : MonoBehaviour
     public string woodyProp;
     public string pepperyProp;
 
-
+    private AudioSource addIngredientSound;
 
 
     // Finding the CarriedObject gameObject as a target & defining self as a variable
@@ -76,7 +76,7 @@ public class VesselManager : MonoBehaviour
     {
         CarriedObject = GameObject.Find("CarriedObject");
         vesselObj = this.gameObject;
-
+        addIngredientSound = GetComponent<AudioSource>();
     }
 
     // When interacted with, this function looks in the player's hand (CarriedObject) for a child (object being carried)
@@ -117,6 +117,8 @@ public class VesselManager : MonoBehaviour
                     //Ingredients are only added if there is room in the vessel
                     if (capacityRemaining >= ingredientAmount || yeastAdd > 0)
                     {
+                        addIngredientSound.PlayOneShot(addIngredientSound.clip, 1);
+
                         honeyAmount += honeyAdd;
                         sweetnessAmount += sweetnessAdd;
                         citrusAmount += citrusAdd;
