@@ -1744,3 +1744,467 @@ System memory in use after: 97.8 MB.
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2545.
 Total: 2.517100 ms (FindLiveObjects: 0.201800 ms CreateObjectMapping: 0.066000 ms MarkObjects: 2.179700 ms  DeleteObjects: 0.068600 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001204 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.957 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.7 MB.
+System memory in use after: 97.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2547.
+Total: 3.009600 ms (FindLiveObjects: 0.287000 ms CreateObjectMapping: 0.075500 ms MarkObjects: 2.549200 ms  DeleteObjects: 0.096600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 809.690203 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33d5edf29c74c976fcece5c7fcf2094b') in 0.026254 seconds
+  Import took 0.031376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011404 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33d5edf29c74c976fcece5c7fcf2094b') in 0.004760 seconds
+  Import took 0.008417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.672124 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0facdcaea26d96cb34eaf9018db5eadd') in 0.038140 seconds
+  Import took 0.042204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000958 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0facdcaea26d96cb34eaf9018db5eadd') in 0.009014 seconds
+  Import took 0.012408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.508228 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d464769aa8e3709f7dffda31d6297c2') in 0.004760 seconds
+  Import took 0.008516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.679315 seconds.
+  path: Assets/Store Assets/Grimoire
+  artifactKey: Guid(23f20289282d5a84f8b2213f51c7d456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Store Assets/Grimoire using Guid(23f20289282d5a84f8b2213f51c7d456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3eb55848dcf92aa0cd9a1ce3f9fc965') in 0.007077 seconds
+  Import took 0.010568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061702 seconds.
+  path: Assets/Store Assets/Grimoire/book.FBX
+  artifactKey: Guid(009b9f48a477a2a4ab577cb2c1cf61fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Store Assets/Grimoire/book.FBX using Guid(009b9f48a477a2a4ab577cb2c1cf61fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db91dd93689bff6469d9c8e0056f8545') in 0.212755 seconds
+  Import took 0.216360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Store Assets/Grimoire/bookscreenshot2.jpg
+  artifactKey: Guid(21d258fa49400b4448b21236a3c72b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Store Assets/Grimoire/bookscreenshot2.jpg using Guid(21d258fa49400b4448b21236a3c72b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19db8752900984812f8a96f0ac243323') in 0.034174 seconds
+  Import took 0.037651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Store Assets/Grimoire/bookscreenshot1.jpg
+  artifactKey: Guid(2eacaf71e6f5af94ca8d5d12b7082f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Store Assets/Grimoire/bookscreenshot1.jpg using Guid(2eacaf71e6f5af94ca8d5d12b7082f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85792ff44e1ce1dd9ac6a1401fac5bd3') in 0.013540 seconds
+  Import took 0.017103 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 89.159389 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69597f1ea6a7c8da2ce7621dd02b2ee8') in 0.013367 seconds
+  Import took 0.017272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.506914 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01f65e2bf62e094d60db536b47a96829') in 0.013437 seconds
+  Import took 0.017262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.668045 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a04a38b27e567404fd5b608e4b0da32') in 0.015988 seconds
+  Import took 0.019951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.873110 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2093bb53a65cd4411f2605b2d4065c6f') in 0.021693 seconds
+  Import took 0.025512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.421844 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47910f0ae90be7d01591b3290edc3f31') in 0.018336 seconds
+  Import took 0.022040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.030406 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c59b3710f7a1314aeb4ee97c5e75de7f') in 0.013168 seconds
+  Import took 0.017245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.305930 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0bebb29493a2e2b5fde32a66de6848f') in 0.013008 seconds
+  Import took 0.016671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.811864 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27f6c8fec184f2acb21a143ef0b47bb5') in 0.010832 seconds
+  Import took 0.014923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.146451 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a4818d7a40d92e73a69d25654e6a95f') in 0.013792 seconds
+  Import took 0.017615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.288130 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d33a2961d6206b65def1be8ee008bf') in 0.014298 seconds
+  Import took 0.018168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.482554 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '537d8d7590e915679e4ddf3197671756') in 0.012950 seconds
+  Import took 0.016995 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001221 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.957 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.4 MB.
+System memory in use after: 98.5 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2555.
+Total: 2.616600 ms (FindLiveObjects: 0.310500 ms CreateObjectMapping: 0.068600 ms MarkObjects: 2.160100 ms  DeleteObjects: 0.076000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.636300 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff7c75dc482259442d2ec6757a5e3d5') in 0.053827 seconds
+  Import took 0.057284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.353643 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508c0d1a451a4be1cf04851c9cd7bd8c') in 0.014040 seconds
+  Import took 0.018311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.822337 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9006c939d8e4821e487439cabc04bbd6') in 0.015476 seconds
+  Import took 0.019901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.998798 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f597a4d2a21d42edfe6cd6230d3a97c') in 0.015352 seconds
+  Import took 0.019674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.192819 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9988acc2881a257fb53f14f007e80d7d') in 0.015848 seconds
+  Import took 0.019637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.396157 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42b35df5a80a0ad43896aaebd54a34aa') in 0.014945 seconds
+  Import took 0.019434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.016485 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca96d006fa452fb1fd5f864612a9b687') in 0.013392 seconds
+  Import took 0.017206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.024664 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9dfce09213f7e7e655906047ba60fda') in 0.010729 seconds
+  Import took 0.014738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.598118 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7929b7d8834a86757d1f7be8d8124b5') in 0.015434 seconds
+  Import took 0.019247 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001156 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.936 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.5 MB.
+System memory in use after: 98.6 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2558.
+Total: 2.776900 ms (FindLiveObjects: 0.332900 ms CreateObjectMapping: 0.096200 ms MarkObjects: 2.259600 ms  DeleteObjects: 0.087000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.867477 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a10bc04e04a3bf09b714ad017e24cf3') in 0.053242 seconds
+  Import took 0.057021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.225385 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2719ff425e4906e14f88dc5833cffc') in 0.010441 seconds
+  Import took 0.014336 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001117 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.944 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.5 MB.
+System memory in use after: 98.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2561.
+Total: 2.583300 ms (FindLiveObjects: 0.241000 ms CreateObjectMapping: 0.071700 ms MarkObjects: 2.190300 ms  DeleteObjects: 0.079300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.360899 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5694c4f871325318596ceceada5b0296') in 0.051479 seconds
+  Import took 0.055056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.172499 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75327c611ab2ddcf76f750c5c9a8b2f') in 0.012138 seconds
+  Import took 0.015824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.983255 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ddc889ef202aae142a3afe0da993030') in 0.010411 seconds
+  Import took 0.014033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.590423 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bda7be000fa7489fe8f7feb23e03ecac') in 0.010593 seconds
+  Import took 0.014289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.155372 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc829da95d8665f8d684bdde9a4fc8aa') in 0.010784 seconds
+  Import took 0.014859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.850571 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f6721090f6d18b4a66c26050123107') in 0.014310 seconds
+  Import took 0.018007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.066493 seconds.
+  path: Assets/Prefabs/MarketLedger.prefab
+  artifactKey: Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MarketLedger.prefab using Guid(bd302dc777d8a0447acf9bb6d9add0ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c841ff68c5413f6c2c977c8533d0df') in 0.011498 seconds
+  Import took 0.015281 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001066 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.096 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1940 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.5 MB.
+System memory in use after: 98.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2564.
+Total: 3.298700 ms (FindLiveObjects: 0.587800 ms CreateObjectMapping: 0.108800 ms MarkObjects: 2.485200 ms  DeleteObjects: 0.116300 ms)
+
