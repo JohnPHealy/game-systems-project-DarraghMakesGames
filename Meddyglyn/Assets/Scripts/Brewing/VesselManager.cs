@@ -273,7 +273,14 @@ public class VesselManager : MonoBehaviour
         yeastTolerance = 0;
         ingredientAmount = 0;
         capacityRemaining = maxLiquidContent;
+        citrusProp = null;
+        tartProp = null;
+        sourProp = null;
+        bitterProp = null;
+        woodyProp = null;
+        pepperyProp = null;
         ExpressValues();
+        GetComponent<ExamineItem>().uiProperties = properties;
     }
 
     public void ExpressValues()
@@ -325,7 +332,7 @@ public class VesselManager : MonoBehaviour
                             }
                         else if (totalLiquidContent > 0)
                             {
-                                    properties = "Contains: " + "Honey" + "(" + honeyAmount + "ml" + ") " + "Water" + "(" + waterAmount + "ml" + ") " 
+                                    properties = "Contains: " + totalLiquidContent + "/" + maxLiquidContent + " " + "Honey" + "(" + honeyAmount + "ml" + ") " + "Water" + "(" + waterAmount + "ml" + ") " 
                                     + "Sweetness " + "(" + sweetnessRating + ") " + "Alcohol " + "(" + alcoholRating + ", " + alcohol + "%" + ") "
                                     + citrusProp + tartProp + sourProp + bitterProp + woodyProp + pepperyProp;
                             }
