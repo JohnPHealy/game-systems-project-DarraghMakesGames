@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\ClearNotification.cs" />
     <Compile Include="Assets\Scripts\LoadingScene.cs" />
     <Compile Include="Assets\Scripts\Economy\BuyAdditionalVessel.cs" />
+    <Compile Include="Assets\Scripts\Brewing\EmptyVessel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
