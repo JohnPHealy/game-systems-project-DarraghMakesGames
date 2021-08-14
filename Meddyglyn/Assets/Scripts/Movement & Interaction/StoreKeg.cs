@@ -62,6 +62,7 @@ public class StoreKeg : MonoBehaviour
                 carried.transform.parent = placedPosition;
                 carried.localPosition = new Vector3(0.336f, 0.061f, -0.032f);
                 carried.localRotation = storageRotation;
+                CarriedObject.GetComponent<CarryingManager>().playPlaceSound();
 
             }
         }

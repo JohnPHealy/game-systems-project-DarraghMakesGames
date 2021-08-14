@@ -6,6 +6,12 @@ public class CarryingManager : MonoBehaviour
 {
 
     private Transform carried;
+    private AudioSource placeSound;
+
+    private void Start()
+    {
+        placeSound = GetComponent<AudioSource>();
+    }
 
     public void DropCarrying()
     {
@@ -20,5 +26,10 @@ public class CarryingManager : MonoBehaviour
         {
             Debug.Log("Not carrying anything!");
         }
+    }
+
+    public void playPlaceSound()
+    {
+        placeSound.PlayOneShot(placeSound.clip, 1);
     }
 }

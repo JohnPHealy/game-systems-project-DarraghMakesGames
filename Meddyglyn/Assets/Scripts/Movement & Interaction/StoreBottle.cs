@@ -62,6 +62,7 @@ public class StoreBottle : MonoBehaviour
                 carried.transform.parent = placedPosition;
                 carried.localPosition = new Vector3(0f, -0.125f, -0.345f);
                 carried.localRotation = storageRotation;
+                CarriedObject.GetComponent<CarryingManager>().playPlaceSound();
 
             }
         }

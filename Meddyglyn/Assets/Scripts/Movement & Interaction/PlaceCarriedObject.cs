@@ -19,7 +19,6 @@ public class PlaceCarriedObject : MonoBehaviour
         placedPosition = this.gameObject.transform.GetChild(0);
         placedPos = placedPosition.position;
 
-
     }
 
     private void Update()
@@ -56,7 +55,7 @@ public class PlaceCarriedObject : MonoBehaviour
                 carried.position = placedPos;
                 carried.rotation = Quaternion.identity;
                 carried.transform.parent = placedPosition;
-
+                CarriedObject.GetComponent<CarryingManager>().playPlaceSound();
             }
         }
 
