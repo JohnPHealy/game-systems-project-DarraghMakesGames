@@ -65,6 +65,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a31eca6f-6ceb-46a1-8249-18815281ab8f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -177,6 +185,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Examine"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e6bbef0-7383-4c23-95bd-605d00f51dbd"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -191,6 +210,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_DefaultPlayer_Interact = m_DefaultPlayer.FindAction("Interact", throwIfNotFound: true);
         m_DefaultPlayer_DropItem = m_DefaultPlayer.FindAction("DropItem", throwIfNotFound: true);
         m_DefaultPlayer_Examine = m_DefaultPlayer.FindAction("Examine", throwIfNotFound: true);
+        m_DefaultPlayer_Pause = m_DefaultPlayer.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -246,6 +266,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_DefaultPlayer_Interact;
     private readonly InputAction m_DefaultPlayer_DropItem;
     private readonly InputAction m_DefaultPlayer_Examine;
+    private readonly InputAction m_DefaultPlayer_Pause;
     public struct DefaultPlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -256,6 +277,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Interact => m_Wrapper.m_DefaultPlayer_Interact;
         public InputAction @DropItem => m_Wrapper.m_DefaultPlayer_DropItem;
         public InputAction @Examine => m_Wrapper.m_DefaultPlayer_Examine;
+        public InputAction @Pause => m_Wrapper.m_DefaultPlayer_Pause;
         public InputActionMap Get() { return m_Wrapper.m_DefaultPlayer; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -283,6 +305,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Examine.started -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnExamine;
                 @Examine.performed -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnExamine;
                 @Examine.canceled -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnExamine;
+                @Pause.started -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_DefaultPlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -305,6 +330,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Examine.started += instance.OnExamine;
                 @Examine.performed += instance.OnExamine;
                 @Examine.canceled += instance.OnExamine;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -317,5 +345,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnDropItem(InputAction.CallbackContext context);
         void OnExamine(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour
 {
 
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject playerCamera;
 
@@ -17,8 +18,10 @@ public class MenuScript : MonoBehaviour
         gameUI.SetActive(true);
         player.GetComponent<FirstPersonController>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1;
 
-        this.gameObject.SetActive(false);
+
+        mainMenu.SetActive(false);
     }
 
     public void Quit()
