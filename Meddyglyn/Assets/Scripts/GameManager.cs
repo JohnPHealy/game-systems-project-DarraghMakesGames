@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject player;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
     public void PauseGame()
     {
         if (!mainMenu.activeSelf)

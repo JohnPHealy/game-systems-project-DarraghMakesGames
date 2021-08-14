@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using StarterAssets;
 
 public class TimerCountdown : MonoBehaviour
 {
 
     public float timeRemaining = 10f;
-    public bool countdown;
+    public bool countdown = false;
     public bool hasFinished = false;
 
     public Text timeReadout;
@@ -15,7 +16,12 @@ public class TimerCountdown : MonoBehaviour
     public float minutes;
     public float seconds;
 
-    private void Start()
+    [SerializeField] private GameObject endScreen;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject gameUI;
+
+
+    public void StartCountdown()
     {
         countdown = true;
     }
@@ -38,6 +44,15 @@ public class TimerCountdown : MonoBehaviour
                 countdown = false;
                 timeRemaining = 0;
             }
+        }
+
+        if (hasFinished)
+        {
+            endScreen.SetActive(true);
+            gameUI.SetActive(false);
+;
+            player.GetComponent<FirstPersonController>().enabled = false;
+            Cursor.lockState = CursorLockMode.Confined;
         }
 
     }
