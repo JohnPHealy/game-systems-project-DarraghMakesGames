@@ -56,14 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Movement &amp; Interaction\ExamineUIUpdate.cs" />
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Economy\PointofSale.cs" />
+    <Compile Include="Assets\Store Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Scripts\Movement &amp; Interaction\InteractionUIUpdater.cs" />
     <Compile Include="Assets\Scripts\Movement &amp; Interaction\StoreKeg.cs" />
+    <Compile Include="Assets\Store Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Scripts\Movement &amp; Interaction\PlaceCarriedObject.cs" />
     <Compile Include="Assets\Store Assets\Laterns and candles\scripts\CameraFacing.cs" />
     <Compile Include="Assets\Scripts\Brewing\LiquidLevel.cs" />
     <Compile Include="Assets\Scripts\Economy\ValueCalculator.cs" />
+    <Compile Include="Assets\Store Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Brewing\IngredientValues.cs" />
     <Compile Include="Assets\Scripts\Economy\GoldPile.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -86,10 +90,7 @@
     <Compile Include="Assets\Scripts\Movement &amp; Interaction\UpdateInteractionPrompt.cs" />
     <Compile Include="Assets\Scripts\Brewing\WaterBehaviour.cs" />
     <Compile Include="Assets\Scripts\GoldCount.cs" />
-    <Compile Include="Assets\Scripts\Movement &amp; Interaction\ExamineUIUpdate.cs" />
-    <Compile Include="Assets\Store Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\Store Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
-    <Compile Include="Assets\Store Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
+    <Compile Include="Assets\Scripts\Economy\CheckMarketValues.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
