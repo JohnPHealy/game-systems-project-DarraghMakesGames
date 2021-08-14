@@ -61,12 +61,12 @@ public class VesselManager : MonoBehaviour
     [SerializeField] GameObject examine;
 
     [SerializeField] private string properties;
-    [SerializeField] private string citrusProp;
-    [SerializeField] private string tartProp;
-    [SerializeField] private string sourProp;
-    [SerializeField] private string bitterProp;
-    [SerializeField] private string woodyProp;
-    [SerializeField] private string pepperyProp;
+    public string citrusProp;
+    public string tartProp;
+    public string sourProp;
+    public string bitterProp;
+    public string woodyProp;
+    public string pepperyProp;
 
 
 
@@ -325,7 +325,7 @@ public class VesselManager : MonoBehaviour
                             alcoholRating = "None";
                         }
 
-
+                        //This sets the properties component of the examine UI based on the contents of the vessel
                         if (totalLiquidContent == 0)
                             {
                                 properties = "Contains: Empty";

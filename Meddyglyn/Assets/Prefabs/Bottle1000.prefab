@@ -205,9 +205,17 @@ MonoBehaviour:
   peppery: 0
   age: 0
   alcohol: 0
+  sweetnessRating: 
+  alcoholRating: 
   filled: 0
   value: 0
   valuePerML: 0
+  citrusProp: 
+  tartProp: 
+  sourProp: 
+  bitterProp: 
+  woodyProp: 
+  pepperyProp: 
   agingStarted: 0
 --- !u!54 &5604150772765765458
 Rigidbody:
@@ -279,10 +287,9 @@ MonoBehaviour:
   examineHolder: {fileID: 0}
   examinePopup: {fileID: 0}
   examinedObject: {fileID: 0}
-  testExamine: This is a bottle
   uiName: Bottle (1000ml)
   uiDescription: A glass bottle for holding liquid. This one holds up to 1000ml.
-  uiProperties: Properties
+  uiProperties: 'Contains: Empty'
 --- !u!1001 &2885965993709622526
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class StorageManager : MonoBehaviour
 {
     public float capacity;
@@ -24,6 +25,15 @@ public class StorageManager : MonoBehaviour
     public float value;
     public float valuePerML;
 
+    private string properties;
+
+    public string citrusProp;
+    public string tartProp;
+    public string sourProp;
+    public string bitterProp;
+    public string woodyProp;
+    public string pepperyProp;
+
     [SerializeField] private bool agingStarted;
 
     public void Fill(GameObject vessel)
@@ -43,6 +53,13 @@ public class StorageManager : MonoBehaviour
             woody = vessel.GetComponent<VesselManager>().woodyStrength;
             peppery = vessel.GetComponent<VesselManager>().pepperyStrength;
 
+            citrusProp = vessel.GetComponent<VesselManager>().citrusProp;
+            tartProp = vessel.GetComponent<VesselManager>().tartProp;
+            sourProp = vessel.GetComponent<VesselManager>().sourProp;
+            bitterProp = vessel.GetComponent<VesselManager>().bitterProp;
+            woodyProp = vessel.GetComponent<VesselManager>().woodyProp;
+            pepperyProp = vessel.GetComponent<VesselManager>().pepperyProp;
+
             sweetnessRating = vessel.GetComponent<VesselManager>().sweetnessRating;
             alcoholRating = vessel.GetComponent<VesselManager>().alcoholRating;
 
@@ -54,6 +71,10 @@ public class StorageManager : MonoBehaviour
             //Starts the aging process
             agingStarted = true;
             StartCoroutine("Aging");
+
+            ExpressValues();
+            GetComponent<ExamineItem>().uiProperties = properties;
+
         }
         else
         {
@@ -68,6 +89,8 @@ public class StorageManager : MonoBehaviour
         {
             yield return new WaitForSeconds(30f);
             age++;
+            ExpressValues();
+            GetComponent<ExamineItem>().uiProperties = properties;
         }
 
             
@@ -84,10 +107,21 @@ public class StorageManager : MonoBehaviour
             agingStarted = false;
         }
 
-
-
-
     }
 
+    public void ExpressValues()
+    {
 
+        //This sets the properties component of the examine UI based on the contents of the vessel
+        if (!filled)
+        {
+            properties = "Contains: Empty";
+        }
+        else
+        {
+            properties = "Contains: " + "Sweetness " + "(" + sweetnessRating + ") " + "Alcohol " + "(" + alcoholRating + ", " + alcohol + "%" + ") "
+            + "Age: " + age + " " + citrusProp + tartProp + sourProp + bitterProp + woodyProp + pepperyProp;
+        }
+
+    }
 }
