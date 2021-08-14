@@ -35,6 +35,7 @@ public class ShopManager : MonoBehaviour
         }
         else if (currentGold < cost)
         {
+            GoldCount.gameObject.SendMessage("CannotAfford", cost);
             Debug.Log("Can't afford!");
         }
 

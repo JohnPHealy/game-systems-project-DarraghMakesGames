@@ -8,6 +8,7 @@ public class GoldCount : MonoBehaviour
 
     public int gold = 25;
     public Text goldReadout;
+    [SerializeField] private GameObject affordNotification;
 
     private void Update()
     {
@@ -24,6 +25,11 @@ public class GoldCount : MonoBehaviour
     {
         gold += profit;
         GameManager.profit += profit;
+    }
+
+    public void CannotAfford()
+    {
+        affordNotification.SetActive(true);
     }
 
 }

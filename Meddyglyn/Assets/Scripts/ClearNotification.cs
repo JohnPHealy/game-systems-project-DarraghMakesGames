@@ -5,15 +5,18 @@ using UnityEngine;
 public class ClearNotification : MonoBehaviour
 {
 
-    void Awake()
+    [SerializeField] float clearTime;
+
+    void OnEnable()
     {
         StartCoroutine("ClearNotif");
     }
 
     IEnumerator ClearNotif()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(clearTime);
         this.gameObject.SetActive(false);
+
     }
 
 
