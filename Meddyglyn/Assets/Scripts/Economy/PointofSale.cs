@@ -40,7 +40,14 @@ public class PointofSale : MonoBehaviour
 
     void Update()
     {
-        preferredFlavour = MarketValues.preferredFlavourName;
+        if (this.transform.childCount == 0)
+        {
+            StopCoroutine("SellItem");
+            hasItem = false;
+            forSale = null;
+        }
+
+                preferredFlavour = MarketValues.preferredFlavourName;
         unpopularFlavour = MarketValues.unpopularFlavourName;
 
         if (this.transform.childCount > 0)
@@ -98,7 +105,7 @@ public class PointofSale : MonoBehaviour
 
     IEnumerator SellItem()
     {
-        waitTime = Random.Range(20, 30);
+        waitTime = Random.Range(10, 25);
         yield return new WaitForSeconds(waitTime);
         Destroy(forSale.gameObject);
         Debug.Log("Item sold!");
