@@ -7,6 +7,7 @@ public class GoldPile : MonoBehaviour
 
     public float value;
     private GameObject GoldCount;
+    private string properties;
 
     private void Start()
     {
@@ -16,6 +17,8 @@ public class GoldPile : MonoBehaviour
     public void SetValue(float setValue)
     {
         value = setValue;
+        properties = value.ToString() + " gold pieces";
+        GetComponent<ExamineItem>().uiProperties = properties;
     }
 
     public void Interacted()
