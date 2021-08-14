@@ -55,6 +55,8 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private float capacityRemaining;
     public GameObject vesselObj;
 
+    [SerializeField] GameObject examine;
+
     
 
     // Finding the CarriedObject gameObject as a target & defining self as a variable
