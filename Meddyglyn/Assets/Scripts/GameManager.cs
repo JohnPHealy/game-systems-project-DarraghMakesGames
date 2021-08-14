@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject restartButton;
 
     public static float batchesMade = 1;
     public static float profit;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
         if (!mainMenu.activeSelf)
         {
             mainMenu.SetActive(true);
+            restartButton.SetActive(true);
             gameUI.SetActive(false);
             Cursor.lockState = CursorLockMode.Confined;
             player.GetComponent<FirstPersonController>().enabled = false;
