@@ -47,9 +47,10 @@ public class PointofSale : MonoBehaviour
             forSale = null;
         }
 
-                preferredFlavour = MarketValues.preferredFlavourName;
+        preferredFlavour = MarketValues.preferredFlavourName;
         unpopularFlavour = MarketValues.unpopularFlavourName;
 
+        //If this has a child (item placed on it) it fetches the values from the child
         if (this.transform.childCount > 0)
         {
 
@@ -105,6 +106,7 @@ public class PointofSale : MonoBehaviour
 
     IEnumerator SellItem()
     {
+        //This coroutine waits a random short period before selling the for-sale item
         waitTime = Random.Range(10, 25);
         yield return new WaitForSeconds(waitTime);
         Destroy(forSale.gameObject);
