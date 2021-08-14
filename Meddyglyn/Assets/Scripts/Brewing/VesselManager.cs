@@ -43,6 +43,9 @@ public class VesselManager : MonoBehaviour
     [SerializeField] private float woodyAdd;
     [SerializeField] private float pepperyAdd;
 
+    public string sweetnessRating;
+    public string alcoholRating;
+
     public bool hasYeast;
    
     [SerializeField] private bool isStarted;
@@ -57,13 +60,23 @@ public class VesselManager : MonoBehaviour
 
     [SerializeField] GameObject examine;
 
-    
+    [SerializeField] private string properties;
+    [SerializeField] private string citrusProp;
+    [SerializeField] private string tartProp;
+    [SerializeField] private string sourProp;
+    [SerializeField] private string bitterProp;
+    [SerializeField] private string woodyProp;
+    [SerializeField] private string pepperyProp;
+
+
+
 
     // Finding the CarriedObject gameObject as a target & defining self as a variable
     void Start()
     {
         CarriedObject = GameObject.Find("CarriedObject");
         vesselObj = this.gameObject;
+
     }
 
     // When interacted with, this function looks in the player's hand (CarriedObject) for a child (object being carried)
@@ -107,11 +120,35 @@ public class VesselManager : MonoBehaviour
                         honeyAmount += honeyAdd;
                         sweetnessAmount += sweetnessAdd;
                         citrusAmount += citrusAdd;
+                            if (citrusAmount > 0)
+                                {
+                                    citrusProp = "Citrus ";
+                                }
                         tartAmount += tartAdd;
+                            if (tartAmount > 0)
+                                {
+                                    tartProp = " Tart ";
+                                }
                         sourAmount += sourAdd;
+                            if (sourAmount > 0)
+                                {
+                                    sourProp = " Sour ";
+                                }
                         bitterAmount += bitterAdd;
+                            if (bitterAmount > 0)
+                                {
+                                    bitterProp = " Bitter ";
+                                }
                         woodyAmount += woodyAdd;
+                            if (woodyAmount > 0)
+                                {
+                                    woodyProp = " Woody ";
+                                }
                         pepperyAmount += pepperyAdd;
+                            if (pepperyAmount > 0)
+                                {
+                            pepperyProp = " Peppery ";
+                                }
 
                         totalLiquidContent += ingredientAmount;
 
@@ -181,6 +218,8 @@ public class VesselManager : MonoBehaviour
     {
         if (totalLiquidContent > 0)
         {
+            ExpressValues();
+            GetComponent<ExamineItem>().uiProperties = properties;
             liquidLevel.gameObject.SetActive(true);
         }
 
@@ -234,6 +273,65 @@ public class VesselManager : MonoBehaviour
         yeastTolerance = 0;
         ingredientAmount = 0;
         capacityRemaining = maxLiquidContent;
+        ExpressValues();
     }
+
+    public void ExpressValues()
+                   {
+                        //This expresses the strength of the honey in human-readable terms
+                        //0-5 is low, 6-10 is average, 11+ is high
+
+                        if (sweetnessStrength > 0 && sweetnessStrength <= 5)
+                        {
+                            sweetnessRating = "Low";
+                        }
+                        else if (sweetnessStrength > 5 && sweetnessStrength < 11)
+                        {
+                            sweetnessRating = "Average";
+                        }
+                        else if (sweetnessStrength >= 11)
+                        {
+                            sweetnessRating = "High";
+                        }
+                        else if (sweetnessStrength == 0)
+                        {
+                            sweetnessRating = "None";
+                        }
+
+                        //This expresses the strength of the alcohol in human-readable terms
+                        //0-5 is low, 6-10 is average, 11+ is high
+
+                        if (alcohol > 0 && alcohol <= 5)
+                        {
+                            alcoholRating = "Low";
+                        }
+                        else if (alcohol > 5 && alcohol < 11)
+                        {
+                            alcoholRating = "Average";
+                        }
+                        else if (alcohol >= 11)
+                        {
+                            alcoholRating = "High";
+                        }
+                        else if (alcohol == 0)
+                        {
+                            alcoholRating = "None";
+                        }
+
+
+                        if (totalLiquidContent == 0)
+                            {
+                                properties = "Contains: Empty";
+                            }
+                        else if (totalLiquidContent > 0)
+                            {
+                                    properties = "Contains: " + "Honey" + "(" + honeyAmount + "ml" + ") " + "Water" + "(" + waterAmount + "ml" + ") " 
+                                    + "Sweetness " + "(" + sweetnessRating + ") " + "Alcohol " + "(" + alcoholRating + ", " + alcohol + "%" + ") "
+                                    + citrusProp + tartProp + sourProp + bitterProp + woodyProp + pepperyProp;
+                            }
+
+
+                }
+
 
 }

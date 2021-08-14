@@ -43,6 +43,9 @@ public class StorageManager : MonoBehaviour
             woody = vessel.GetComponent<VesselManager>().woodyStrength;
             peppery = vessel.GetComponent<VesselManager>().pepperyStrength;
 
+            sweetnessRating = vessel.GetComponent<VesselManager>().sweetnessRating;
+            alcoholRating = vessel.GetComponent<VesselManager>().alcoholRating;
+
             valuePerML = vessel.GetComponent<ValueCalculator>().valuePerMl;
 
             //This reduces the amount left in the vessel by the capacity of this storage
@@ -73,38 +76,6 @@ public class StorageManager : MonoBehaviour
     private void Update()
     {
         value = (valuePerML * capacity) + storageValue + age;
-
-        //This expresses the strength of the honey in human-readable terms
-        //0-5 is low, 6-10 is average, 11+ is high
-
-        if (sweetness <= 5)
-        {
-            sweetnessRating = "Low";
-        }
-        else if (sweetness > 5 && sweetness < 11)
-        {
-            sweetnessRating = "Average";
-        }
-        else if (sweetness >= 11)
-        {
-            sweetnessRating = "High";
-        }
-
-        //This expresses the strength of the alcohol in human-readable terms
-        //0-5 is low, 6-10 is average, 11+ is high
-
-        if (alcohol <= 5)
-        {
-            alcoholRating = "Low";
-        }
-        else if (alcohol > 5 && alcohol < 11)
-        {
-            alcoholRating = "Average";
-        }
-        else if (alcohol >= 11)
-        {
-            alcoholRating = "High";
-        }
 
         //Stops aging once maximum aging has reached (5 minutes)
         if (age >= 10)
