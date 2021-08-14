@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MarketValues : MonoBehaviour
 {
+    [SerializeField] private GameObject marketNotification;
 
     public static float honeyValue;
     public static float sweetnessValue;
@@ -47,7 +48,9 @@ public class MarketValues : MonoBehaviour
         while (marketRandom)
         {
             yield return new WaitForSeconds(marketInterval);
-            
+
+            marketNotification.SetActive(true);
+
             sweetnessValue = Random.Range(0.5f, 2f);
             strengthValue = Random.Range(0.5f, 2f);
             ageValue = Random.Range(1f, 1.5f);
