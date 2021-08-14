@@ -73,6 +73,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""CheatAddGold"",
+                    ""type"": ""Button"",
+                    ""id"": ""ef07afe2-779f-40e2-a757-660b1a9b7536"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -196,6 +204,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77a1422b-c71d-4875-9981-b8220949c054"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CheatAddGold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -211,6 +230,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_DefaultPlayer_DropItem = m_DefaultPlayer.FindAction("DropItem", throwIfNotFound: true);
         m_DefaultPlayer_Examine = m_DefaultPlayer.FindAction("Examine", throwIfNotFound: true);
         m_DefaultPlayer_Pause = m_DefaultPlayer.FindAction("Pause", throwIfNotFound: true);
+        m_DefaultPlayer_CheatAddGold = m_DefaultPlayer.FindAction("CheatAddGold", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -267,6 +287,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_DefaultPlayer_DropItem;
     private readonly InputAction m_DefaultPlayer_Examine;
     private readonly InputAction m_DefaultPlayer_Pause;
+    private readonly InputAction m_DefaultPlayer_CheatAddGold;
     public struct DefaultPlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -278,6 +299,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @DropItem => m_Wrapper.m_DefaultPlayer_DropItem;
         public InputAction @Examine => m_Wrapper.m_DefaultPlayer_Examine;
         public InputAction @Pause => m_Wrapper.m_DefaultPlayer_Pause;
+        public InputAction @CheatAddGold => m_Wrapper.m_DefaultPlayer_CheatAddGold;
         public InputActionMap Get() { return m_Wrapper.m_DefaultPlayer; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -308,6 +330,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnPause;
+                @CheatAddGold.started -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnCheatAddGold;
+                @CheatAddGold.performed -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnCheatAddGold;
+                @CheatAddGold.canceled -= m_Wrapper.m_DefaultPlayerActionsCallbackInterface.OnCheatAddGold;
             }
             m_Wrapper.m_DefaultPlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -333,6 +358,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @CheatAddGold.started += instance.OnCheatAddGold;
+                @CheatAddGold.performed += instance.OnCheatAddGold;
+                @CheatAddGold.canceled += instance.OnCheatAddGold;
             }
         }
     }
@@ -346,5 +374,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnDropItem(InputAction.CallbackContext context);
         void OnExamine(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnCheatAddGold(InputAction.CallbackContext context);
     }
 }

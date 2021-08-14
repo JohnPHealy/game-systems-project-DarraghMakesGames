@@ -20,25 +20,26 @@ public class GameOverCalc : MonoBehaviour
         batchesText.GetComponent<TMPro.TextMeshProUGUI>().text = "Batches made: " + GameManager.batchesMade.ToString();
         profitText.GetComponent<TMPro.TextMeshProUGUI>().text = "Profit: " + GameManager.profit.ToString();
 
-
-        switch (profit)
+        if (profit >= 300)
         {
-            case > 300:
-                goldTrophy.GetComponent<Outline>().enabled = true;
-                break;
-
-            case > 200:
-                silverTrophy.GetComponent<Outline>().enabled = true;
-                break;
-
-            case > 100:
-                bronzeTrophy.GetComponent<Outline>().enabled = true;
-                break;
-
-            default:
-                Debug.Log("Failed to make enough profit");
-                break;
+            goldTrophy.GetComponent<Outline>().enabled = true;
         }
 
+        else if (profit >= 200 && profit < 300)
+        {
+            silverTrophy.GetComponent<Outline>().enabled = true;
+        }
+        else if (profit >= 100 && profit < 200)
+        {
+            bronzeTrophy.GetComponent<Outline>().enabled = true;
+        }
+        else
+        {
+            Debug.Log("Player failed at capitalism");
+        }
+
+
     }
+
 }
+

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject restartButton;
 
-    public static float batchesMade = 1;
+    public static float batchesMade = 0;
     public static float profit;
 
     private void Start()

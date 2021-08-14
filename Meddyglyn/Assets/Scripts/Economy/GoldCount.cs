@@ -21,7 +21,7 @@ public class GoldCount : MonoBehaviour
         gold -= cost;
     }
 
-    void AddGold (int profit)
+    public void AddGold (int profit)
     {
         gold += profit;
         GameManager.profit += profit;
