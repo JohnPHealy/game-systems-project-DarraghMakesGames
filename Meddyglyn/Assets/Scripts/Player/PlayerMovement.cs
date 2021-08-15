@@ -25,13 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //Horizontal movement
-        playerController.Move(movement * moveSpeed * Time.deltaTime);
-
-        //Gravity
-        movement.y += gravity * Time.deltaTime;
-        Vector3 moveV = new Vector3(0f, movement.y, 0f);
-        playerController.Move(moveV * Time.deltaTime);
 
         //Camera look code
         transform.Rotate(Vector3.up, lookX * Time.deltaTime);
@@ -41,6 +34,14 @@ public class PlayerMovement : MonoBehaviour
         targetRotation.x = vertRotation;
         playerCamera.eulerAngles = targetRotation;
 
+        //Horizontal movement
+        playerController.Move(moveSpeed * Time.deltaTime * movement);
+
+        //Gravity
+        movement.y += gravity * Time.deltaTime;
+        Vector3 moveV = new Vector3(0f, movement.y, 0f);
+        playerController.Move(moveV * Time.deltaTime);
+
     }
 
     public void Movement(InputAction.CallbackContext context)
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         float moveInputX = moveInput.x;
         float moveInputY = moveInput.y;
         movement = transform.right * moveInputX + transform.forward * moveInputY;
-        //movement = new Vector3(moveInput.x, 0f, moveInput.y).normalized;
+
     }
 
     public void MouseLook(InputAction.CallbackContext context)

@@ -19,7 +19,7 @@ public class MenuScript : MonoBehaviour
 
         playerCamera.SetActive(true);
         gameUI.SetActive(true);
-        player.GetComponent<FirstPersonController>().enabled = true;
+        player.GetComponent<PlayerMovement>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
 

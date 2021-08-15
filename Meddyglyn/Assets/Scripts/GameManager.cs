@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
             restartButton.SetActive(true);
             gameUI.SetActive(false);
             Cursor.lockState = CursorLockMode.Confined;
-            player.GetComponent<FirstPersonController>().enabled = false;
+            player.GetComponent<PlayerMovement>().enabled = false;
             Time.timeScale = 0;
 
         }
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
             optionsMenu.SetActive(false);
             gameUI.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
-            player.GetComponent<FirstPersonController>().enabled = true;
+            player.GetComponent<PlayerMovement>().enabled = true;
         }
     }
 
