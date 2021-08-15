@@ -6,6 +6,7 @@ using StarterAssets;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject restartButton;
@@ -30,10 +31,11 @@ public class GameManager : MonoBehaviour
 
         }
 
-        else if (mainMenu.activeSelf)
+        else if (mainMenu.activeSelf || optionsMenu.activeSelf)
         {
             Time.timeScale = 1f;
             mainMenu.SetActive(false);
+            optionsMenu.SetActive(false);
             gameUI.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             player.GetComponent<FirstPersonController>().enabled = true;

@@ -9,6 +9,7 @@ public class MenuScript : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject playerCamera;
 
@@ -23,6 +24,7 @@ public class MenuScript : MonoBehaviour
         Time.timeScale = 1;
 
         mainMenu.SetActive(false);
+        optionsMenu.SetActive(false);
     }
 
     public void Quit()

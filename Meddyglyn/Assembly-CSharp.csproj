@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Brewing\WaterBehaviour.cs" />
     <Compile Include="Assets\Scripts\Brewing\EmptyVessel.cs" />
     <Compile Include="Assets\Scripts\Economy\GoldCount.cs" />
+    <Compile Include="Assets\Scripts\MusicVolumeControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
